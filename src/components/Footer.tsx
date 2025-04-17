@@ -40,16 +40,15 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-xl font-semibold mb-4">Contact</h3>
-            <p className="text-gray-300 mb-2">
-              Have questions about Ndịokwu?
-            </p>
-            <Link 
-              href="mailto:contact@ndiokwu.com" 
-              className="text-purple-400 hover:text-purple-300 transition-colors"
+            <h3 className="font-bold mb-4">Contact</h3>
+            <a
+              href="https://instagram.com/ndiokwu.script"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-gray-300"
             >
-              contact@ndiokwu.com
-            </Link>
+              @ndiokwu.script
+            </a>
           </div>
         </div>
         
