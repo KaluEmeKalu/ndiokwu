@@ -4,7 +4,7 @@ const nextConfig = {
   images: {
     unoptimized: true,  // Required for static export
   },
-  // Removed basePath for custom domain
+  // Custom domain configuration for ndiokwu.org
   experimental: {
     optimizePackageImports: ['framer-motion'],
   },
