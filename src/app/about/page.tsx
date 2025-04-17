@@ -106,12 +106,14 @@ export default function About() {
                 <p className="text-gray-600 text-center">The tonal efficiency of Mandarin inspired the phonetic approach to Ndịokwu.</p>
               </div>
 
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <div className="w-16 h-16 mx-auto mb-4 bg-purple-100 rounded-full flex items-center justify-center">
-                  <span className="text-3xl text-purple-800">ꔔ</span>
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                <div className="w-16 h-16 mx-auto mb-4 bg-purple-100 dark:bg-gray-700 rounded-full flex items-center justify-center">
+                  <span className="text-3xl text-purple-800 dark:text-purple-300">ꔔ</span>
                 </div>
                 <h3 className="text-xl font-semibold text-center mb-3">Vai Script</h3>
-                <p className="text-gray-600 text-center">The successful implementation of the Vai syllabary provided a practical model.</p>
+                <p className="text-gray-600 dark:text-gray-400 text-center">
+                  The Vai syllabary provided a practical model. Most Ndịokwu characters are  directly from this script, devised by Momolu Duwalu Bukele in Liberia.
+                </p>
               </div>
             </div>
           </motion.div>
