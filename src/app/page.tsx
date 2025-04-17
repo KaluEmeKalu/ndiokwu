@@ -1,103 +1,188 @@
+"use client";
+
 import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+  const item = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0 }
+  };
+
+  return (
+    <div className="flex flex-col min-h-screen">
+      {/* Hero Section */}
+      <section className="hero-gradient text-white py-20 md:py-32">
+        <div className="container mx-auto px-6 flex flex-col md:flex-row items-center">
+          <motion.div 
+            className="md:w-1/2 mb-10 md:mb-0"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              ꗏ̈ 𑀏 ꗷ̱ <span className="block mt-2">Ndịokwu</span>
+            </h1>
+            <p className="text-xl md:text-2xl mb-8">
+              The most efficient writing system ever developed for the Igbo language.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link 
+                href="/learn" 
+                className="bg-white text-purple-900 px-8 py-3 rounded-lg font-medium text-lg hover:bg-gray-100 transition-colors inline-block text-center"
+              >
+                Start Learning
+              </Link>
+              <Link 
+                href="/converter" 
+                className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium text-lg hover:bg-white/10 transition-colors inline-block text-center"
+              >
+                Try Converter
+              </Link>
+            </div>
+          </motion.div>
+          <motion.div 
+            className="md:w-1/2 flex justify-center"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Read our docs
-          </a>
+            <div className="relative w-64 h-64 md:w-96 md:h-96 float-animation">
+              <div className="absolute inset-0 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-6xl md:text-9xl">
+                ꗏ̈
+              </div>
+            </div>
+          </motion.div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 bg-gray-50 dark:bg-gray-900">
+        <div className="container mx-auto px-6">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose Ndịokwu?</h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              Discover the benefits of the most efficient writing system for Igbo
+            </p>
+          </motion.div>
+
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-3 gap-8"
+            variants={container}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+          >
+            <motion.div 
+              className="feature-card bg-white dark:bg-gray-800 p-8 rounded-xl shadow-md"
+              variants={item}
+            >
+              <div className="w-14 h-14 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center mb-6">
+                <span className="text-2xl text-purple-800 dark:text-purple-400">𑀚</span>
+              </div>
+              <h3 className="text-xl font-bold mb-3">Phonetically Precise</h3>
+              <p className="text-gray-600 dark:text-gray-300">
+                44 base consonants and 8 consistent vowel diacritics capture every sound in Igbo with precision.
+              </p>
+            </motion.div>
+
+            <motion.div 
+              className="feature-card bg-white dark:bg-gray-800 p-8 rounded-xl shadow-md"
+              variants={item}
+            >
+              <div className="w-14 h-14 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center mb-6">
+                <span className="text-2xl text-purple-800 dark:text-purple-400">ꕈ</span>
+              </div>
+              <h3 className="text-xl font-bold mb-3">Quick to Learn</h3>
+              <p className="text-gray-600 dark:text-gray-300">
+                With its logical structure and consistent rules, mastery can be achieved in under 30 minutes.
+              </p>
+            </motion.div>
+
+            <motion.div 
+              className="feature-card bg-white dark:bg-gray-800 p-8 rounded-xl shadow-md"
+              variants={item}
+            >
+              <div className="w-14 h-14 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center mb-6">
+                <span className="text-2xl text-purple-800 dark:text-purple-400">ꖷ</span>
+              </div>
+              <h3 className="text-xl font-bold mb-3">Unicode Compatible</h3>
+              <p className="text-gray-600 dark:text-gray-300">
+                Fully digital-ready with complete Unicode support, making it perfect for modern communication.
+              </p>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-white dark:bg-gray-800">
+        <div className="container mx-auto px-6">
+          <motion.div 
+            className="max-w-4xl mx-auto text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Begin Your Journey?</h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 mb-10">
+              Start learning Ndịokwu today and master the most efficient writing system for Igbo language.
+            </p>
+            <Link 
+              href="/learn" 
+              className="bg-purple-800 hover:bg-purple-900 text-white px-10 py-4 rounded-lg font-medium text-lg transition-colors inline-block"
+            >
+              Start Learning Now
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Sample Text Section */}
+      <section className="py-20 bg-gray-50 dark:bg-gray-900">
+        <div className="container mx-auto px-6">
+          <motion.div 
+            className="max-w-4xl mx-auto"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-3xl font-bold mb-8 text-center">See Ndịokwu in Action</h2>
+            <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-md">
+              <h3 className="text-xl font-semibold mb-4">Sample Text:</h3>
+              <div className="mb-6 p-4 bg-gray-100 dark:bg-gray-700 rounded-lg">
+                <p className="text-xl mb-2">Ndịokwu:</p>
+                <p className="text-2xl mb-6">𑀐ꕫ̳𑀲̳ꖫꔕ𑀩ꕪ̳ꕈꖹ𑀩, 𑀐𑀛̳ꔧ𑀲ꖫꔕꕫ̳𑀏ꕚ𑀩ꗦ̱𑀲̈ᓂ </p>
+                
+                <p className="text-xl mb-2">Igbo Latin:</p>
+                <p className="text-lg mb-6">Ọ bụrụ na ị na-ịgụ ihe a, ọ pụtara na ị bụ onye Afurịka.</p>
+                
+                <p className="text-xl mb-2">English:</p>
+                <p className="text-lg">If you are reading this, it means you are an African.</p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
     </div>
   );
 }
