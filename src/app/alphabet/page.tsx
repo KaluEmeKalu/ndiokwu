@@ -198,13 +198,10 @@ export default function AlphabetPage() {
               <div className="p-6">
                 <ul className="space-y-4">
                   <li className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
-                    <span className="text-2xl">𑀐 𑀭̈ ꖝꖝ</span>
+                    <span className="text-2xl">𑀐ꖙ̈𑀠𑀠</span>
                     <span className="text-gray-600 dark:text-gray-300">ọ dị mma</span>
                   </li>
-                  <li className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
-                    <span className="text-2xl">ꕺ 𑀚 ꖝ</span>
-                    <span className="text-gray-600 dark:text-gray-300">a na m</span>
-                  </li>
+
                   <li className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
                     <div className="flex flex-col items-center mb-4">
                       <span className="text-2xl">ꗏ̈ 𑀏 ꗷ̱</span>
