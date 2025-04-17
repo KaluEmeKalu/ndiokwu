@@ -5,6 +5,37 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 // import { getGuideContent } from '@/lib/markdown';
 
+// Consonant and vowel data
+const consonants = [
+  { sound: 'b', glyph: 'ꕫ' }, { sound: 'mb', glyph: '𑄘' },
+  { sound: 'ch', glyph: '𑀳' }, { sound: 'n', glyph: 'ꖫ' },
+  { sound: 'd', glyph: 'ꖙ' }, { sound: 'nd', glyph: 'ꗏ' },
+  { sound: 'f', glyph: 'ꗦ' }, { sound: 'ng', glyph: '𑀔' },
+  { sound: 'g', glyph: 'ꕪ' }, { sound: 'nk', glyph: '𑄉' },
+  { sound: 'gb', glyph: 'ꘛ' }, { sound: 'nt', glyph: '꘧' },
+  { sound: 'gh', glyph: 'ꔎ' }, { sound: 'nw', glyph: 'ꖇ' },
+  { sound: 'gw', glyph: 'ꖸ' }, { sound: 'ny', glyph: 'ꕚ' },
+  { sound: 'h', glyph: 'ꖹ' }, { sound: 'p', glyph: 'ꔵ' },
+  { sound: 'j', glyph: 'ꕦ' }, { sound: 'r', glyph: 'ꕼ' },
+  { sound: 'k', glyph: 'ꖑ' }, { sound: 's', glyph: '𑀚' },
+  { sound: 'kp', glyph: 'ꗯ' }, { sound: 't', glyph: 'ꔧ' },
+  { sound: 'kw', glyph: 'ꗷ' }, { sound: 'v', glyph: '꘣' },
+  { sound: 'l', glyph: 'ꘗ' }, { sound: 'w', glyph: '𑀲' },
+  { sound: 'm', glyph: '𑀠' }, { sound: 'y', glyph: '𑀫' },
+  { sound: 'z', glyph: '𑀣' }
+];
+
+const vowels = [
+  { vowel: 'a', mark: '—', unicode: '—', placement: 'No mark', example: '𑀠' },
+  { vowel: 'e', mark: 'ˉ', unicode: 'U+0304', placement: 'Macron above', example: '𑀠̄' },
+  { vowel: 'i', mark: '̊', unicode: 'U+030A', placement: 'Ring above', example: '𑀠̊' },
+  { vowel: 'ị', mark: '̈', unicode: 'U+0308', placement: 'Double dots above', example: '𑀠̈' },
+  { vowel: 'o', mark: '̣', unicode: 'U+0323', placement: 'Dot below', example: '𑀠̣' },
+  { vowel: 'ọ', mark: '̤', unicode: 'U+0324', placement: 'Two dots below', example: '𑀠̤' },
+  { vowel: 'u', mark: '̱', unicode: 'U+0331', placement: 'Short line below', example: '𑀠̱' },
+  { vowel: 'ụ', mark: '̳', unicode: 'U+0333', placement: 'Double line below', example: '𑀠̳' }
+];
+
 export default function LearnPage() {
   // This would come from the server component in a real app
   // For now, we'll use mock data that matches the structure
@@ -13,94 +44,148 @@ export default function LearnPage() {
       title: "Introduction",
       content: `<p><strong>Ndịokwu</strong> is the most efficient writing system ever developed for the <strong>Igbo language</strong>. Designed for phonetic precision, simplicity, and speed, it compresses the entire syllabic inventory of Igbo into:</p>
       <ul>
-        <li><strong>44 base consonants</strong></li>
-        <li><strong>8 consistent vowel diacritics</strong></li>
+        <li><strong>41 base consonants</strong></li>
+        <li><strong>7 consistent vowel diacritics</strong></li>
         <li><strong>8 independent vowels</strong></li>
       </ul>
-      <p>It is fully Unicode-compatible, with each consonant-vowel pairing forming a single, elegant glyph. Mastery can be achieved in <strong>under 30 minutes</strong>.</p>`
-    },
-    {
-      title: "Vowel Diacritics",
-      content: `<p>Each consonant defaults to the vowel <strong>"a"</strong> (no mark). To indicate other vowels, apply the corresponding diacritic:</p>
+      <p>It is fully Unicode-compatible, with each consonant-vowel pairing forming a single, elegant glyph. Mastery can be achieved in <strong>under 30 minutes</strong>.</p>
+      
+      <h2 class="text-2xl font-bold mt-8 mb-4">How to Use Ndịokwu</h2>
+      
+      <p><strong>Ndịokwu</strong> is an <strong>abugida writing system</strong> specifically designed for writing the Igbo language.</p>
+      
+      <h3 class="text-xl font-bold mt-6 mb-3">What is an <em>abugida</em>?</h3>
+      
+      <p>An abugida is a writing system where <strong>each character represents a consonant sound with an inherent vowel</strong>. Unlike an alphabet where vowels and consonants are written as separate letters, an abugida starts with <strong>consonants as base characters</strong>, and <strong>vowels are shown with diacritics (marks)</strong> added to those base characters.</p>
+      
+      <hr class="my-6 border-gray-300 dark:border-gray-600" />
+      
+      <h3 class="text-xl font-bold mt-6 mb-3">Consonants as the Core of the Script</h3>
+      
+      <p>Ndịokwu uses <strong>41 consonant glyphs</strong> to represent all the consonant and digraph sounds in Igbo. These characters are the <strong>foundation</strong> of every syllable and word written in the system.</p>
+      
+      <hr class="my-6 border-gray-300 dark:border-gray-600" />
+      
+      <h3 class="text-xl font-bold mt-6 mb-3"> How Words Are Formed</h3>
+      
+      <ol class="list-decimal pl-5 space-y-4 my-4">
+        <li>
+          <p><strong>Start with a consonant</strong>:<br>
+          Each character automatically includes the vowel <strong>a</strong> as its default ending.</p>
+          <p class="ml-4">Example:</p>
+          <ul class="list-disc ml-8">
+            <li>𑀠 = <strong>ma</strong></li>
+            <li>ꖙ = <strong>da</strong></li>
+          </ul>
+        </li>
+        
+        <li>
+          <p><strong>Add a vowel diacritic</strong> to change the vowel ending:<br>
+          Use one of the <strong>7 vowel diacritics</strong> to transform the <strong>default 'a'</strong> into another vowel:</p>
+          
+          <table class="w-full border-collapse my-4">
+            <thead>
+              <tr class="bg-purple-100 dark:bg-purple-900/30">
+                <th class="border p-2">Vowel</th>
+                <th class="border p-2">Diacritic</th>
+                <th class="border p-2">Example</th>
+                <th class="border p-2">Latin</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border p-2"><strong>a</strong></td>
+                <td class="border p-2"><em>(none)</em></td>
+                <td class="border p-2 text-xl">𑀠</td>
+                <td class="border p-2">ma</td>
+              </tr>
+              <tr>
+                <td class="border p-2"><strong>e</strong></td>
+                <td class="border p-2">ˉ (macron)</td>
+                <td class="border p-2 text-xl">𑀠̄</td>
+                <td class="border p-2">me</td>
+              </tr>
+              <tr>
+                <td class="border p-2"><strong>i</strong></td>
+                <td class="border p-2">̊ (ring)</td>
+                <td class="border p-2 text-xl">𑀠̊</td>
+                <td class="border p-2">mi</td>
+              </tr>
+              <tr>
+                <td class="border p-2"><strong>ị</strong></td>
+                <td class="border p-2">̈ (umlaut)</td>
+                <td class="border p-2 text-xl">𑀠̈</td>
+                <td class="border p-2">mị</td>
+              </tr>
+              <tr>
+                <td class="border p-2"><strong>o</strong></td>
+                <td class="border p-2">̣ (dot)</td>
+                <td class="border p-2 text-xl">𑀠̣</td>
+                <td class="border p-2">mo</td>
+              </tr>
+              <tr>
+                <td class="border p-2"><strong>ọ</strong></td>
+                <td class="border p-2">̤ (dbl dot)</td>
+                <td class="border p-2 text-xl">𑀠̤</td>
+                <td class="border p-2">mọ</td>
+              </tr>
+              <tr>
+                <td class="border p-2"><strong>u</strong></td>
+                <td class="border p-2">̱ (line)</td>
+                <td class="border p-2 text-xl">𑀠̱</td>
+                <td class="border p-2">mu</td>
+              </tr>
+              <tr>
+                <td class="border p-2"><strong>ụ</strong></td>
+                <td class="border p-2">̳ (dbl line)</td>
+                <td class="border p-2 text-xl">𑀠̳</td>
+                <td class="border p-2">mụ</td>
+              </tr>
+            </tbody>
+          </table>
+        </li>
+        
+        <li>
+          <p><strong>That's it!</strong> No need to write vowels separately—just attach the correct mark to the consonant to change its sound.</p>
+        </li>
+      </ol>
+      
+      <hr class="my-6 border-gray-300 dark:border-gray-600" />
+      
+      <h3 class="text-xl font-bold mt-6 mb-3">📌 Examples</h3>
+      
       <table class="w-full border-collapse my-4">
         <thead>
           <tr class="bg-purple-100 dark:bg-purple-900/30">
-            <th class="border p-2">Vowel</th>
-            <th class="border p-2">Diacritic</th>
-            <th class="border p-2">Unicode</th>
-            <th class="border p-2">Placement</th>
-            <th class="border p-2">Example (m)</th>
+            <th class="border p-2">Word</th>
+            <th class="border p-2">Breakdown</th>
+            <th class="border p-2">Script</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td class="border p-2">a</td>
-            <td class="border p-2">—</td>
-            <td class="border p-2">—</td>
-            <td class="border p-2">No mark</td>
-            <td class="border p-2 text-xl">𑀠</td>
-          </tr>
-          <tr>
-            <td class="border p-2">e</td>
-            <td class="border p-2">ʼ</td>
-            <td class="border p-2">U+02BC</td>
-            <td class="border p-2">Top-right tick</td>
-            <td class="border p-2 text-xl">𑀠ʼ</td>
-          </tr>
-          <tr>
-            <td class="border p-2">i</td>
-            <td class="border p-2">̊</td>
-            <td class="border p-2">U+030A</td>
-            <td class="border p-2">Ring above</td>
-            <td class="border p-2 text-xl">𑀠̊</td>
-          </tr>
-          <tr>
-            <td class="border p-2">ị</td>
-            <td class="border p-2">̈</td>
-            <td class="border p-2">U+0308</td>
-            <td class="border p-2">Double dots above</td>
+            <td class="border p-2"><em>mị</em></td>
+            <td class="border p-2"><strong>m</strong> + diacritic for <strong>ị</strong></td>
             <td class="border p-2 text-xl">𑀠̈</td>
           </tr>
           <tr>
-            <td class="border p-2">o</td>
-            <td class="border p-2">̣</td>
-            <td class="border p-2">U+0323</td>
-            <td class="border p-2">Dot below</td>
-            <td class="border p-2 text-xl">𑀠̣</td>
+            <td class="border p-2"><em>du</em></td>
+            <td class="border p-2"><strong>d</strong> + diacritic for <strong>u</strong></td>
+            <td class="border p-2 text-xl">ꖙ̱</td>
           </tr>
           <tr>
-            <td class="border p-2">ọ</td>
-            <td class="border p-2">̤</td>
-            <td class="border p-2">U+0324</td>
-            <td class="border p-2">Two dots below</td>
-            <td class="border p-2 text-xl">𑀠̤</td>
-          </tr>
-          <tr>
-            <td class="border p-2">u</td>
-            <td class="border p-2">̱</td>
-            <td class="border p-2">U+0331</td>
-            <td class="border p-2">Short line below</td>
-            <td class="border p-2 text-xl">𑀠̱</td>
-          </tr>
-          <tr>
-            <td class="border p-2">ụ</td>
-            <td class="border p-2">̳</td>
-            <td class="border p-2">U+0333</td>
-            <td class="border p-2">Double line below</td>
-            <td class="border p-2 text-xl">𑀠̳</td>
-          </tr>
-          <tr>
-            <td class="border p-2">∅ (bare consonant)</td>
-            <td class="border p-2">̆</td>
-            <td class="border p-2">U+0306</td>
-            <td class="border p-2">Breve above center</td>
-            <td class="border p-2 text-xl">𑀠̆</td>
+            <td class="border p-2"><em>sụ</em></td>
+            <td class="border p-2"><strong>s</strong> + diacritic for <strong>ụ</strong></td>
+            <td class="border p-2 text-xl">𑀚̳</td>
           </tr>
         </tbody>
       </table>
       
-      <h3 class="text-xl font-bold mt-6 mb-3">Independent Vowels</h3>
-      <p>When a vowel appears by itself or starts a word, use these standalone characters:</p>
+      <p>This system makes it <strong>fast, compact, and highly phonetic</strong>, perfectly suited for the structure of Igbo. Once you know the consonants and diacritics, <strong>you can read and write any Igbo word</strong> using Ndịokwu!</p>`
+    },
+    {
+      title: "Independent Vowels",
+      content: `<p>When a vowel appears by itself or starts a word, use these standalone characters:</p>
       <table class="w-full border-collapse my-4">
         <thead>
           <tr class="bg-purple-100 dark:bg-purple-900/30">
@@ -145,8 +230,47 @@ export default function LearnPage() {
       </table>`
     },
     {
+      title: "Consonant-Vowel Combinations",
+      content: `
+      <div class="overflow-x-auto">
+        <table class="w-full border-collapse my-4 min-w-[800px]">
+          <thead>
+            <tr class="bg-purple-100 dark:bg-purple-900/30">
+              <th class="border p-2">Consonant</th>
+              <th class="border p-2">a (—)</th>
+              <th class="border p-2">e (̄)</th>
+              <th class="border p-2">i (̊)</th>
+              <th class="border p-2">ị (̈)</th>
+              <th class="border p-2">o (̣)</th>
+              <th class="border p-2">ọ (̤)</th>
+              <th class="border p-2">u (̱)</th>
+              <th class="border p-2">ụ (̳)</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${consonants.map(c => `
+              <tr>
+                <td class="border p-2 font-bold">${c.sound} (${c.glyph})</td>
+                <td class="border p-2 text-xl">${c.glyph}</td>
+                <td class="border p-2 text-xl">${c.glyph}̄</td>
+                <td class="border p-2 text-xl">${c.glyph}̊</td>
+                <td class="border p-2 text-xl">${c.glyph}̈</td>
+                <td class="border p-2 text-xl">${c.glyph}̣</td>
+                <td class="border p-2 text-xl">${c.glyph}̤</td>
+                <td class="border p-2 text-xl">${c.glyph}̱</td>
+                <td class="border p-2 text-xl">${c.glyph}̳</td>
+              </tr>
+            `).join('')}
+          </tbody>
+        </table>
+      </div>`
+    },
+    {
       title: "Writing Rules",
-      content: `<h3 class="text-xl font-bold mt-6 mb-3">Rule 1: True Digraphs Are Native Consonants</h3>
+      content: `<h3 class="text-xl font-bold mt-6 mb-3">Rule 1: CV Structure</h3>
+      <p>All syllables are written as <strong>consonant (or digraph) + vowel diacritic</strong>.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Rule 2: Digraphs Are Native Consonants</h3>
       <p>Treat these digraphs as <strong>single letters</strong>:</p>
       <ul class="list-disc pl-5 my-3">
         <li><strong>ch, gb, gh, gw, kp, kw, nw, ny</strong></li>
@@ -154,95 +278,94 @@ export default function LearnPage() {
       <p>They behave like any other base consonant:</p>
       <ul class="list-disc pl-5 my-3">
         <li><em>nwa</em> → ꖷ</li>
-        <li><em>nye</em> → ꕚʼ</li>
+        <li><em>nye</em> → ꕚ̄</li>
       </ul>
 
-      <h3 class="text-xl font-bold mt-6 mb-3">Rule 2: Double Consonants (Geminates)</h3>
+      <h3 class="text-xl font-bold mt-6 mb-3">Rule 3: Double Consonants</h3>
       <p>For <strong>repeated consonants</strong>, just <strong>double the base</strong>.<br>No diacritic is used.</p>
       <ul class="list-disc pl-5 my-3">
-        <li><em>mma</em> → ꖝꖝ</li>
+        <li><em>mma</em> → 𑀠𑀠</li>
         <li><em>nno</em> → ꖫꖫ̣</li>
         <li><em>nnyocha</em> → ꖫꖫʼꗏ̤𑀳ʼ</li>
       </ul>
       
-      <h3 class="text-xl font-bold mt-6 mb-3">Rule 3: Bare Consonants (Breve ◌̆)</h3>
-      <p>In <strong>Igbo</strong>, <strong>bare consonants should generally not occur</strong>, since every syllable has a vowel, and consonant clusters are handled as <strong>native digraphs</strong> (e.g. <em>ndị</em> → ꗏ̈)</p>
-      <p>However, the <strong>breve diacritic (◌̆)</strong> is reserved for <strong>non-Igbo words</strong>, transliterations, or <strong>foreign names</strong> where a true bare consonant must be shown:</p>
+      <h3 class="text-xl font-bold mt-6 mb-3">Rule 4: Bare Consonants</h3>
+      <p>In Igbo, <strong>most syllables end in a vowel</strong>, and consonants are normally followed by a vowel sound. But in rare cases — especially in <strong>loanwords</strong> or complex native clusters — a consonant may appear <strong>without a following vowel</strong>.</p>
+      <h4 class="text-lg font-semibold mt-5 mb-2">When to Use a Bare Consonant</h4>
       <ul class="list-disc pl-5 my-3">
-        <li><em>film</em> → ꗦ̊ ꖝ ꖝ̆</li>
-        <li><em>Chris</em> → 𑀳̆ꕫʼ𑀲</li>
+        <li>When a word <strong>starts with a consonant cluster</strong>, like <strong>"mgba"</strong>, where the <strong>m</strong> has <strong>no vowel</strong>.</li>
+        <li>When a <strong>foreign word</strong> or <strong>abbreviation</strong> ends in a consonant.</li>
+        <li>When <strong>syllabic structure</strong> or <strong>intonation</strong> requires an explicitly silent or standalone consonant.</li>
       </ul>
-      <p>Use this only when strictly necessary.</p>
+      <p>To show this in the <strong>Ndịokwu</strong>, we use the <strong>breve mark (◌̆)</strong> placed <strong>above the consonant</strong> to indicate it is <strong>bare</strong> (i.e., it stands alone without any vowel).</p>
       
-      <h3 class="text-xl font-bold mt-6 mb-3">Rule 4: Independent Vowels Stay Standalone</h3>
-      <p>Use <strong>standalone vowel characters</strong> when:</p>
+      <h4 class="text-lg font-semibold mt-5 mb-2">Example: "mgbagwoju" (𑀠̆ ꘛꖸ̣ꕦ̱ )</h4>
+      
+      <table class="w-full border-collapse my-4">
+        <thead>
+          <tr class="bg-purple-100 dark:bg-purple-900/30">
+            <th class="border p-2">Latin Igbo</th>
+            <th class="border p-2">Script</th>
+            <th class="border p-2">Explanation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border p-2">m</td>
+            <td class="border p-2 text-xl">𑀠̆</td>
+            <td class="border p-2">Bare "m" (no vowel sound)</td>
+          </tr>
+          <tr>
+            <td class="border p-2">gb</td>
+            <td class="border p-2 text-xl">ꘛ</td>
+            <td class="border p-2">"gb" with default vowel "a"</td>
+          </tr>
+          <tr>
+            <td class="border p-2">a</td>
+            <td class="border p-2 text-xl">—</td>
+            <td class="border p-2">Already included in ꘛ</td>
+          </tr>
+          <tr>
+            <td class="border p-2">gw + o</td>
+            <td class="border p-2 text-xl">ꖸ̣</td>
+            <td class="border p-2">"gw" + dot below = <em>gwo</em></td>
+          </tr>
+          <tr>
+            <td class="border p-2">j + u</td>
+            <td class="border p-2 text-xl">ꕦ̱</td>
+            <td class="border p-2">"j" + short line below = <em>ju</em></td>
+          </tr>
+        </tbody>
+      </table>
+      
+      
+
+      
+      <p>Other examples:</p>
+      <ul class="list-disc pl-5 my-3">
+        <li><em>film</em> → ꗦ̊ ꗯ̆ 𑀠̆</li>
+      </ul>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Rule 5: Independent Vowels</h3>
+      <p>Use standalone vowel characters when:</p>
       <ul class="list-disc pl-5 my-3">
         <li>A vowel starts a word</li>
         <li>The vowel is by itself</li>
       </ul>
       <p>Examples:</p>
       <ul class="list-disc pl-5 my-3">
-        <li><em>ọ dị mma</em> → 𑀐 ꖙ̈ ꖝꖝ</li>
-        <li><em>a na m</em> → 𑀩 ꖫ ꖝ</li>
+        <li><em>ọ dị mma</em> → 𑀐 ꖙ̈ 𑀠𑀠</li>
+        <li><em>a na m</em> → 𑀩 ꖫ 𑀠</li>
       </ul>
       
-      <h3 class="text-xl font-bold mt-6 mb-3">Rule 5: Tone Marks (Optional)</h3>
+      <h3 class="text-xl font-bold mt-6 mb-3">Rule 6: Tone Marks (Optional)</h3>
       <p>If explicit tone marking is needed, use:</p>
       <ul class="list-disc pl-5 my-3">
         <li>High tone: <strong>˄</strong> (place after vowel diacritic if one exists)</li>
         <li>Low tone: <strong>˅</strong> (place after vowel diacritic if one exists)</li>
         <li>Mid tone: no mark (default)</li>
       </ul>
-      <p>Example: <em>hé</em> (high tone) → ꖹʼ˄</p>`
-    },
-    {
-      title: "Glyph Groups",
-      content: `<p>The Ndịokwu script organizes consonants into logical groups based on phonetic properties:</p>
-      
-      <table class="w-full border-collapse my-6">
-        <thead>
-          <tr class="bg-purple-100 dark:bg-purple-900/30">
-            <th class="border p-2">Group</th>
-            <th class="border p-2">Assigned Sounds</th>
-            <th class="border p-2">Glyphs</th>
-            <th class="border p-2">Explanation</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="border p-2 font-semibold">Group A1</td>
-            <td class="border p-2">gb, gh, gw</td>
-            <td class="border p-2 text-xl">ꘛ, ꔎ, ꖸ</td>
-            <td class="border p-2">Voiced labial–velars/fricatives; looped energy</td>
-          </tr>
-          <tr>
-            <td class="border p-2 font-semibold">Group B1</td>
-            <td class="border p-2">b, j, nt, nd</td>
-            <td class="border p-2 text-xl">ꕫ, ꕦ, ꘧, ꗏ</td>
-            <td class="border p-2">Voiced stops + affricates</td>
-          </tr>
-          <tr>
-            <td class="border p-2 font-semibold">Group B2</td>
-            <td class="border p-2">f, v</td>
-            <td class="border p-2 text-xl">ꗦ, ꘣</td>
-            <td class="border p-2">Voiceless/voiced fricatives</td>
-          </tr>
-          <tr>
-            <td class="border p-2 font-semibold">Group D2</td>
-            <td class="border p-2">ng, kp</td>
-            <td class="border p-2 text-xl">𑀔, ꗯ</td>
-            <td class="border p-2">Deep-back/nasal–labial clusters</td>
-          </tr>
-          <tr>
-            <td class="border p-2 font-semibold">Group F</td>
-            <td class="border p-2">mb, nk</td>
-            <td class="border p-2 text-xl">𑄘, 𑄉</td>
-            <td class="border p-2">Pre-nasalized clusters</td>
-          </tr>
-        </tbody>
-      </table>
-      
-      <p>Understanding these phonetic groupings helps to recognize patterns in the Ndịokwu script and makes learning the system more intuitive.</p>`
+      <p>Example: <em>hé</em> (high tone) → ꖹ̄˄</p>`
     }
   ];
 

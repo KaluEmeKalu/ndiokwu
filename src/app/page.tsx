@@ -45,6 +45,12 @@ export default function Home() {
                 Start Learning
               </Link>
               <Link 
+                href="/alphabet" 
+                className="bg-purple-800 text-white px-8 py-3 rounded-lg font-medium text-lg hover:bg-purple-900 transition-colors inline-block text-center"
+              >
+                Full Alphabet
+              </Link>
+              <Link 
                 href="/converter" 
                 className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium text-lg hover:bg-white/10 transition-colors inline-block text-center"
               >
