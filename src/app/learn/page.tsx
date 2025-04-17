@@ -1,8 +1,9 @@
 "use client";
 
+import React from 'react';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { getGuideContent } from '@/lib/markdown';
+// import { getGuideContent } from '@/lib/markdown';
 
 export default function LearnPage() {
   // This would come from the server component in a real app

@@ -69,13 +69,6 @@ export default function ConverterPage() {
   
   const outputRef = useRef<HTMLDivElement>(null);
 
-  // Auto-convert on initial load
-  useEffect(() => {
-    if (inputText) {
-      handleConvert();
-    }
-  }, []);
-
   // Basic Latin to Ndịokwu conversion logic
   const convertLatinToNdiokwu = (text: string): string => {
     // This is a simplified implementation.
@@ -137,7 +130,7 @@ export default function ConverterPage() {
   };
 
   // Converter function for Ndịokwu to Latin
-  const convertNdiokwuToLatin = (text: string): string => {
+  const convertNdiokwuToLatin = (_: string): string => {
     // This is a placeholder. A real implementation would need
     // complex parsing of Ndịokwu characters and diacritics.
     return "Ndịokwu to Latin conversion feature coming soon! 🚧";
@@ -156,6 +149,12 @@ export default function ConverterPage() {
       setIsConverting(false);
     }, 500);
   };
+
+  // Auto-convert on initial load
+  useEffect(() => {
+    handleConvert();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleCopy = async () => {
     if (outputRef.current) {

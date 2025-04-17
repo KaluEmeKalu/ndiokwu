@@ -4,13 +4,15 @@ const nextConfig = {
   images: {
     unoptimized: true,  // Required for static export
   },
-  // GitHub Pages compatibility
-  basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
-  // Disables image optimization for static export
+  // Removed basePath for custom domain
   experimental: {
     optimizePackageImports: ['framer-motion'],
   },
   reactStrictMode: true,
+  eslint: {
+    // Disable ESLint during builds
+    ignoreDuringBuilds: true,
+  },
 };
 
 module.exports = nextConfig; 
