@@ -38,12 +38,12 @@ export default function AlphabetPage() {
     { symbol: 'f', base: 'ꗦ' },
     { symbol: 'g', base: 'ꕪ' },
     { symbol: 'gb', base: 'ꘛ' },
-    { symbol: 'gh', base: 'ꔎ' },
+    { symbol: 'gh', base: 'ꗯ' },
     { symbol: 'gw', base: 'ꖸ' },
     { symbol: 'h', base: 'ꖹ' },
     { symbol: 'j', base: 'ꕦ' },
     { symbol: 'k', base: 'ꖑ' },
-    { symbol: 'kp', base: 'ꗯ' },
+    { symbol: 'kp', base: '꘤' },
     { symbol: 'kw', base: 'ꗷ' },
     { symbol: 'l', base: 'ꘗ' },
     { symbol: 'm', base: '𑀠' },
@@ -54,7 +54,7 @@ export default function AlphabetPage() {
     { symbol: 'nk', base: '𑄉' },
     { symbol: 'nt', base: '꘧' },
     { symbol: 'nw', base: 'ꖇ' },
-    { symbol: 'ny', base: 'ꕚ' },
+    { symbol: 'ny', base: '꘥' },
     { symbol: 'p', base: 'ꔵ' },
     { symbol: 'r', base: 'ꕼ' },
     { symbol: 's', base: '𑀚' },
@@ -209,7 +209,7 @@ export default function AlphabetPage() {
                     </div>
                   </li>
                   <li className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
-                    <span className="text-2xl">ꕈꕰ̣</span>
+                    <span className="text-2xl">ꕈꘛ̣</span>
                     <span className="text-gray-600 dark:text-gray-300">igbo</span>
                   </li>
                 </ul>

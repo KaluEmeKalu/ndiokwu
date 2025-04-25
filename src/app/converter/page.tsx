@@ -170,10 +170,10 @@ export default function ConverterPage() {
 
   // Example conversions
   const examples = [
-    { latin: "onye", ndiokwu: "𑀏 ꕚʼ" },
+    { latin: "onye", ndiokwu: "𑀏 ꘥ʼ" },
     { latin: "ndịokwu", ndiokwu: "ꗏ̈ 𑀏 ꗷ̱" },
-    { latin: "igbo", ndiokwu: "ꕈꕰ̣" },
-    { latin: "akwụkwọ", ndiokwu: "𑀩𑀔̳𑀔̤" }
+    { latin: "igbo", ndiokwu: "ꕈꘛ̣" },
+    { latin: "akwụkwọ", ndiokwu: "𑀩꘤̳꘤̤" }
   ];
 
   return (

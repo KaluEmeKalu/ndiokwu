@@ -278,7 +278,7 @@ export default function LearnPage() {
       <p>They behave like any other base consonant:</p>
       <ul class="list-disc pl-5 my-3">
         <li><em>nwa</em> → ꖷ</li>
-        <li><em>nye</em> → ꕚ̄</li>
+        <li><em>nye</em> → ꘥̄</li>
       </ul>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Rule 3: Double Consonants</h3>
