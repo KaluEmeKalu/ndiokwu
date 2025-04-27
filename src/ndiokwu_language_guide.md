@@ -44,7 +44,7 @@ Each consonant defaults to the vowel **"a"** (no mark). To indicate other vowels
 | **gb**    | ꘛ         | **nt**    | ꘧         |
 | **gh**    | ꔎ         | **nw**    | ꖇ         |
 | **gw**    | ꖸ         | **ny**    | ꕚ         |
-| **h**     | ꖹ         | **nz**    | ꖦ         |
+| **h**     | ꖹ         | **nz**    | ꗢ         |
 | **j**     | ꕦ         | **p**     | ꔵ         |
 | **k**     | ꖑ         | **r**     | ꕼ         |
 | **kp**    | ꗯ         | **s**     | 𑀚         |
