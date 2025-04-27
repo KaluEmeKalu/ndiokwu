@@ -43,6 +43,7 @@ export default function ConsonantVowelTable({ className = '' }: ConsonantVowelTa
     { symbol: 'nt', base: '꘧' },
     { symbol: 'nw', base: 'ꖇ' },
     { symbol: 'ny', base: '꘥' },
+    { symbol: 'nz', base: 'ꖦ' },
     { symbol: 'p', base: 'ꔵ' },
     { symbol: 'r', base: 'ꕼ' },
     { symbol: 's', base: '𑀚' },

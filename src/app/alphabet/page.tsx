@@ -55,6 +55,7 @@ export default function AlphabetPage() {
     { symbol: 'nt', base: '꘧' },
     { symbol: 'nw', base: 'ꖇ' },
     { symbol: 'ny', base: '꘥' },
+    { symbol: 'nz', base: 'ꖦ' },
     { symbol: 'p', base: 'ꔵ' },
     { symbol: 'r', base: 'ꕼ' },
     { symbol: 's', base: '𑀚' },
