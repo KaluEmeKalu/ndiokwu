@@ -1,11 +1,11 @@
-# **Ndịokwu (ꗏ̈ 𑀏 ꗷ̱) Igbo Abugida Language Guide **  
+# **Ndịokwu (ⴳ̈ 𑀏 ꗷ̱) Igbo Abugida Language Guide **  
 
 
 ---
 
 ## 1. Introduction
 
-**Ndịokwu** (ꗏ̈ 𑀏 ꗷ̱) is the most efficient writing system ever developed for the **Igbo language**. Designed for phonetic precision, simplicity, and speed, it compresses the entire syllabic inventory of Igbo into:
+**Ndịokwu** (ⴳ̈ 𑀏 ꗷ̱) is the most efficient writing system ever developed for the **Igbo language**. Designed for phonetic precision, simplicity, and speed, it compresses the entire syllabic inventory of Igbo into:
 
 - **32 base consonants**  
 - **8 consistent vowel diacritics**  
@@ -108,7 +108,7 @@ No diacritic is used.
 
 ### 🅾️ **Rule 3: Bare Consonants (Breve ◌̆)**
 
-In **Igbo**, **bare consonants should generally not occur**, since every syllable has a vowel, and consonant clusters are handled as **native digraphs** (e.g. *ndị* → ꗏ̈)
+In **Igbo**, **bare consonants should generally not occur**, since every syllable has a vowel, and consonant clusters are handled as **native digraphs** (e.g. *ndị* → ⴳ̈)
 
 🔤 However, the **breve diacritic (◌̆)** is reserved for **non-Igbo words**, transliterations, or **foreign names** where a true bare consonant must be shown:
 

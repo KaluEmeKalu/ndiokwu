@@ -32,7 +32,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              ꗏ̈ 𑀏 ꗷ̱ <span className="block mt-2">Ndịokwu</span>
+              ⴳ̈ 𑀏 ꗷ̱ <span className="block mt-2">Ndịokwu</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8">
               The most efficient writing system ever developed for the Igbo language.

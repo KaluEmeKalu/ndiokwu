@@ -78,7 +78,7 @@ export default function ConverterPage() {
     
     // Special cases for common words that need specific translations
     const specialCases: Record<string, string> = {
-      'ndịokwu': 'ꗏ̈ 𑀏 ꗷ̱',
+      'ndịokwu': 'ⴳ̈ 𑀏 ꗷ̱',
       // Add more special cases as needed
     };
     
@@ -171,7 +171,7 @@ export default function ConverterPage() {
   // Example conversions
   const examples = [
     { latin: "onye", ndiokwu: "𑀏 ꘥ʼ" },
-    { latin: "ndịokwu", ndiokwu: "ꗏ̈ 𑀏 ꗷ̱" },
+    { latin: "ndịokwu", ndiokwu: "ⴳ̈ 𑀏 ꗷ̱" },
     { latin: "igbo", ndiokwu: "ꕈꘛ̣" },
     { latin: "akwụkwọ", ndiokwu: "𑀩꘤̳꘤̤" }
   ];

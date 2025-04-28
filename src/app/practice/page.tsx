@@ -125,7 +125,7 @@ export default function PracticePage() {
       back: "ọ dị mma"
     },
     {
-      front: "ꗏ̈ 𑀏 ꗷ̱",
+      front: "ⴳ̈ 𑀏 ꗷ̱",
       back: "ndịokwu"
     }
   ];

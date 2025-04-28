@@ -205,7 +205,7 @@ export default function AlphabetPage() {
 
                   <li className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
                     <div className="flex flex-col items-center mb-4">
-                      <span className="text-2xl">ꗏ̈ 𑀏 ꗷ̱</span>
+                      <span className="text-2xl">ⴳ̈ 𑀏 ꗷ̱</span>
                       <span className="text-gray-600 dark:text-gray-300">ndịokwu</span>
                     </div>
                   </li>
