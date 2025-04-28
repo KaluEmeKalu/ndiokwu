@@ -38,16 +38,16 @@ Each consonant defaults to the vowel **"a"** (no mark). To indicate other vowels
 |-----------|-----------|-----------|-----------|
 | **b**     | ꕫ         | **mb**    | 𑄘         |
 | **ch**    | 𑀳         | **n**     | ꖫ         |
-| **d**     | ꖙ         | **nd**    | ꗏ         |
+| **d**     | ꖙ         | **nd**    | ⴳ         |
 | **f**     | ꗦ         | **ng**    | 𑀔         |
 | **g**     | ꕪ         | **nk**    | 𑄉         |
 | **gb**    | ꘛ         | **nt**    | ꘧         |
 | **gh**    | ꔎ         | **nw**    | ꖇ         |
-| **gw**    | ꖸ         | **ny**    | ꕚ         |
+| **gw**    | ꖸ         | **ny**    | 𑀤         |
 | **h**     | ꖹ         | **nz**    | ꗢ         |
-| **j**     | ꕦ         | **p**     | ꔵ         |
+| **j**     | ꗏ         | **p**     | ꔵ         |
 | **k**     | ꖑ         | **r**     | ꕼ         |
-| **kp**    | ꗯ         | **s**     | 𑀚         |
+| **kp**    | 𑁟         | **s**     | 𑀚         |
 | **kw**    | ꗷ         | **t**     | ꔧ         |
 | **l (L)** | ꘗ         | **v**     | ꘣         |
 | **m**     | 𑀠         | **w**     | 𑀲         |
@@ -64,7 +64,7 @@ Each consonant defaults to the vowel **"a"** (no mark). To indicate other vowels
 
 | **a**  | 𑀅     |
 
-| **e**  | **𑀓** |
+| **e**  | 𑀟     |
 
 | **i**  | 𑀇     |
 
@@ -173,9 +173,9 @@ The Ndịokwu script organizes consonants into logical groups based on phonetic 
 | Group | Assigned Sounds | Glyphs | Explanation |
 |-------|-----------------|--------|-------------|
 | Group A1 | gb, gh, gw | ꘛ, ꔎ, ꖸ | Voiced labial–velars/fricatives; looped energy |
-| Group B1 | b, j, nt, nd | ꕫ, ꕦ, ꘧, ꗏ | Voiced stops + affricates |
+| Group B1 | b, j, nt, nd | ꕫ, ꗏ, ꘧, ⴳ | Voiced stops + affricates |
 | Group B2 | f, v | ꗦ, ꘣ | Voiceless/voiced fricatives |
-| Group D2 | ng, kp | 𑀔, ꗯ | Deep-back/nasal–labial clusters |
+| Group D2 | ng, kp | 𑀔, 𑁟 | Deep-back/nasal–labial clusters |
 | Group F | mb, nk | 𑄘, 𑄉 | Pre-nasalized clusters |
 
 Understanding these phonetic groupings helps to recognize patterns in the Ndịokwu script and makes learning the system more intuitive.
