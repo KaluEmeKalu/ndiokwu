@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 // Translation mappings
 const vowelMap: Record<string, string> = {
   'a': '𑀩',
-  'e': 'ꕺ',
+  'e': '𑀟',
   'i': 'ꕈ',
   'ị': 'ꔕ',
   'o': '𑀏',
@@ -25,20 +25,23 @@ const consonantMap: Record<string, string> = {
   'gh': 'ꔎ',
   'gw': 'ꖸ',
   'h': 'ꖹ',
-  'j': 'ꕦ',
+  'j': 'ꗏ',
   'k': 'ꖑ',
-  'kp': 'ꗯ',
+  'kp': '𑁟',
   'kw': 'ꗷ',
   'l': 'ꘗ',
   'm': '𑀠',
   'mb': '𑄘',
   'n': 'ꖫ',
-  'nd': 'ꗏ',
+  'nd': 'ⴳ',
   'ng': '𑀔',
+  'nj': 'ꖝ',
   'nk': '𑄉',
+  'ns': '𑀶',
   'nt': '꘧',
   'nw': 'ꖇ',
-  'ny': 'ꕚ',
+  'ny': '𑀤',
+  'nz': 'ꗢ',
   'p': 'ꔵ',
   'r': 'ꕼ',
   's': '𑀚',
@@ -51,7 +54,7 @@ const consonantMap: Record<string, string> = {
 
 const vowelDiacriticMap: Record<string, string> = {
   'a': '',
-  'e': 'ʼ',
+  'e': '̄',
   'i': '̊',
   'ị': '̈',
   'o': '̣',
@@ -88,7 +91,7 @@ export default function ConverterPage() {
     }
     
     // First, handle digraphs to prevent partial matches
-    const digraphRegex = /(ch|gb|gh|gw|kp|kw|nw|ny|mb|nd|ng|nk|nt)/gi;
+    const digraphRegex = /(ch|gb|gh|gw|kp|kw|nj|ns|nw|ny|mb|nd|ng|nk|nt|nz)/gi;
     let processed = text.replace(digraphRegex, match => `__${match}__`);
     
     // Process consonant + vowel combinations

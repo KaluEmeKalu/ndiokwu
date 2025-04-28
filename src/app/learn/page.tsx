@@ -9,25 +9,26 @@ import { motion } from 'framer-motion';
 const consonants = [
   { sound: 'b', glyph: 'ꕫ' }, { sound: 'mb', glyph: '𑄘' },
   { sound: 'ch', glyph: '𑀳' }, { sound: 'n', glyph: 'ꖫ' },
-  { sound: 'd', glyph: 'ꖙ' }, { sound: 'nd', glyph: 'ꗏ' },
+  { sound: 'd', glyph: 'ꖙ' }, { sound: 'nd', glyph: 'ⴳ' },
   { sound: 'f', glyph: 'ꗦ' }, { sound: 'ng', glyph: '𑀔' },
-  { sound: 'g', glyph: 'ꕪ' }, { sound: 'nk', glyph: '𑄉' },
-  { sound: 'gb', glyph: 'ꘛ' }, { sound: 'nt', glyph: '꘧' },
-  { sound: 'gh', glyph: 'ꔎ' }, { sound: 'nw', glyph: 'ꖇ' },
-  { sound: 'gw', glyph: 'ꖸ' }, { sound: 'ny', glyph: 'ꕚ' },
-  { sound: 'h', glyph: 'ꖹ' }, { sound: 'p', glyph: 'ꔵ' },
-  { sound: 'j', glyph: 'ꕦ' }, { sound: 'r', glyph: 'ꕼ' },
-  { sound: 'k', glyph: 'ꖑ' }, { sound: 's', glyph: '𑀚' },
-  { sound: 'kp', glyph: 'ꗯ' }, { sound: 't', glyph: 'ꔧ' },
-  { sound: 'kw', glyph: 'ꗷ' }, { sound: 'v', glyph: '꘣' },
-  { sound: 'l', glyph: 'ꘗ' }, { sound: 'w', glyph: '𑀲' },
-  { sound: 'm', glyph: '𑀠' }, { sound: 'y', glyph: '𑀫' },
-  { sound: 'z', glyph: '𑀣' }
+  { sound: 'g', glyph: 'ꕪ' }, { sound: 'nj', glyph: 'ꖝ' },
+  { sound: 'gb', glyph: 'ꘛ' }, { sound: 'nk', glyph: '𑄉' },
+  { sound: 'gh', glyph: 'ꔎ' }, { sound: 'ns', glyph: '𑀶' },
+  { sound: 'gw', glyph: 'ꖸ' }, { sound: 'nt', glyph: '꘧' },
+  { sound: 'h', glyph: 'ꖹ' }, { sound: 'nw', glyph: 'ꖇ' },
+  { sound: 'j', glyph: 'ꗏ' }, { sound: 'ny', glyph: '𑀤' },
+  { sound: 'k', glyph: 'ꖑ' }, { sound: 'nz', glyph: 'ꗢ' },
+  { sound: 'kp', glyph: '𑁟' }, { sound: 'p', glyph: 'ꔵ' },
+  { sound: 'kw', glyph: 'ꗷ' }, { sound: 'r', glyph: 'ꕼ' },
+  { sound: 'l', glyph: 'ꘗ' }, { sound: 's', glyph: '𑀚' },
+  { sound: 'm', glyph: '𑀠' }, { sound: 't', glyph: 'ꔧ' },
+  { sound: 'v', glyph: '꘣' }, { sound: 'w', glyph: '𑀲' },
+  { sound: 'y', glyph: '𑀫' }, { sound: 'z', glyph: '𑀣' }
 ];
 
 const vowels = [
   { vowel: 'a', mark: '—', unicode: '—', placement: 'No mark', example: '𑀠' },
-  { vowel: 'e', mark: 'ˉ', unicode: 'U+0304', placement: 'Macron above', example: '𑀠̄' },
+  { vowel: 'e', mark: '̄', unicode: 'U+0304', placement: 'Macron above', example: '𑀠̄' },
   { vowel: 'i', mark: '̊', unicode: 'U+030A', placement: 'Ring above', example: '𑀠̊' },
   { vowel: 'ị', mark: '̈', unicode: 'U+0308', placement: 'Double dots above', example: '𑀠̈' },
   { vowel: 'o', mark: '̣', unicode: 'U+0323', placement: 'Dot below', example: '𑀠̣' },
@@ -200,7 +201,7 @@ export default function LearnPage() {
           </tr>
           <tr>
             <td class="border p-2">e</td>
-            <td class="border p-2 text-xl">ꕺ</td>
+            <td class="border p-2 text-xl">𑀟</td>
           </tr>
           <tr>
             <td class="border p-2">i</td>
@@ -278,7 +279,7 @@ export default function LearnPage() {
       <p>They behave like any other base consonant:</p>
       <ul class="list-disc pl-5 my-3">
         <li><em>nwa</em> → ꖷ</li>
-        <li><em>nye</em> → ꘥̄</li>
+        <li><em>nye</em> → 𑀤̄</li>
       </ul>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Rule 3: Double Consonants</h3>
@@ -286,7 +287,7 @@ export default function LearnPage() {
       <ul class="list-disc pl-5 my-3">
         <li><em>mma</em> → 𑀠𑀠</li>
         <li><em>nno</em> → ꖫꖫ̣</li>
-        <li><em>nnyocha</em> → ꖫꖫʼꗏ̤𑀳ʼ</li>
+        <li><em>nnyocha</em> → ꖫꖫ̄ꗏ̤𑀳̄</li>
       </ul>
       
       <h3 class="text-xl font-bold mt-6 mb-3">Rule 4: Bare Consonants</h3>
@@ -332,7 +333,7 @@ export default function LearnPage() {
           </tr>
           <tr>
             <td class="border p-2">j + u</td>
-            <td class="border p-2 text-xl">ꕦ̱</td>
+            <td class="border p-2 text-xl">ꗏ̱</td>
             <td class="border p-2">"j" + short line below = <em>ju</em></td>
           </tr>
         </tbody>
@@ -343,7 +344,7 @@ export default function LearnPage() {
       
       <p>Other examples:</p>
       <ul class="list-disc pl-5 my-3">
-        <li><em>film</em> → ꗦ̊ ꗯ̆ 𑀠̆</li>
+        <li><em>film</em> → ꗦ̊ ꖝ̆ 𑀠̆</li>
       </ul>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Rule 5: Independent Vowels</h3>

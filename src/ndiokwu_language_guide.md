@@ -22,7 +22,7 @@ Each consonant defaults to the vowel **"a"** (no mark). To indicate other vowels
 | Vowel | Diacritic | Unicode | Placement           | Example (`n`) |
 |--------|-----------|----------|----------------------|---------------|
 | a      | —         | —        | No mark              | 𑀦           |
-| e      | ʼ         | U+02BC   | Top-right tick       | 𑀦ʼ          |
+| e      | ̄         | U+0304   | Macron above         | 𑀦̄          |
 | i      | ̊         | U+030A   | One oval above       | 𑀦̊          |
 | ị      | ̈         | U+0308   | Two ovals above      | 𑀦̈          |
 | o      | ̣         | U+0323   | Dot below            | 𑀦̣          |
@@ -40,18 +40,19 @@ Each consonant defaults to the vowel **"a"** (no mark). To indicate other vowels
 | **ch**    | 𑀳         | **n**     | ꖫ         |
 | **d**     | ꖙ         | **nd**    | ⴳ         |
 | **f**     | ꗦ         | **ng**    | 𑀔         |
-| **g**     | ꕪ         | **nk**    | 𑄉         |
-| **gb**    | ꘛ         | **nt**    | ꘧         |
-| **gh**    | ꔎ         | **nw**    | ꖇ         |
-| **gw**    | ꖸ         | **ny**    | 𑀤         |
-| **h**     | ꖹ         | **nz**    | ꗢ         |
-| **j**     | ꗏ         | **p**     | ꔵ         |
-| **k**     | ꖑ         | **r**     | ꕼ         |
-| **kp**    | 𑁟         | **s**     | 𑀚         |
-| **kw**    | ꗷ         | **t**     | ꔧ         |
-| **l (L)** | ꘗ         | **v**     | ꘣         |
-| **m**     | 𑀠         | **w**     | 𑀲         |
-| **z**     | 𑀣         | **y**     | 𑀫         |
+| **g**     | ꕪ         | **nj**    | ꖝ         |
+| **gb**    | ꘛ         | **nk**    | 𑄉         |
+| **gh**    | ꔎ         | **ns**    | 𑀶         |
+| **gw**    | ꖸ         | **nt**    | ꘧         |
+| **h**     | ꖹ         | **nw**    | ꖇ         |
+| **j**     | ꗏ         | **ny**    | 𑀤         |
+| **k**     | ꖑ         | **nz**    | ꗢ         |
+| **kp**    | 𑁟         | **p**     | ꔵ         |
+| **kw**    | ꗷ         | **r**     | ꕼ         |
+| **l (L)** | ꘗ         | **s**     | 𑀚         |
+| **m**     | 𑀠         | **t**     | ꔧ         |
+| **z**     | 𑀣         | **v**     | ꘣         |
+| **w**     | 𑀲         | **y**     | 𑀫         |
 
 ---
 
@@ -91,7 +92,7 @@ Treat these digraphs as **single letters**:
 
 ✅ They behave like any other base consonant:
 - *nwa* → 𑀟̱  
-- *nye* → 𑀒ʼ
+- *nye* → 𑀤̄
 
 ---
 
@@ -102,7 +103,7 @@ No diacritic is used.
 
 - *mma* → 𑀫𑀫  
 - *nno* → 𑀦𑀦̣  
-- *nnyocha* → 𑀦𑀦ʼ𑀬̤𑀙ʼ
+- *nnyocha* → 𑀦𑀦̄𑀬̤𑀳̄
 
 ---
 
@@ -155,13 +156,13 @@ In **Ndịokwu**, tone is generally inferred from context. However, if explicit 
 - If the **top of the glyph is free** (no diacritic), place the caret **above** the consonant.
 - If there is **already a top diacritic** (e.g., **ʼ** or **̊**), place the caret at the **end** of the glyph to avoid collisions.
 
-### Examples with 𑀳ʼ (“he”)
+### Examples with 𑀳̄ ("he")
 
 | Tone     | Marking      | Glyph    | Explanation                                              |
 |----------|--------------|----------|----------------------------------------------------------|
-| High     | 𑀳ʼ˄         | “hé”     | Up-caret (˄) appended after the ʼ top mark              |
-| Low      | 𑀳ʼ˅         | “hè”     | Down-caret (˅) appended after the ʼ top mark            |
-| Mid      | 𑀳ʼ          | “he”     | No tone mark (default)                                  |
+| High     | 𑀳̄˄         | "hé"     | Up-caret (˄) appended after the ̄ top mark              |
+| Low      | 𑀳̄˅         | "hè"     | Down-caret (˅) appended after the ̄ top mark            |
+| Mid      | 𑀳̄          | "he"     | No tone mark (default)                                  |
 
 **Use these tone markers only if tone distinction is crucial.** Otherwise, leaving them out simplifies the script.
 ---

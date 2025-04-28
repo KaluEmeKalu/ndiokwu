@@ -58,7 +58,7 @@ export default function PracticePage() {
         { text: "ꖝ̱", isCorrect: false },
         { text: "ꖝ̱ꖝ̱", isCorrect: false },
         { text: "ꖝꖝ", isCorrect: true },
-        { text: "ꖝ̱ꕺ", isCorrect: false }
+        { text: "ꖝ̱𑀟", isCorrect: false }
       ],
       explanation: "For repeated consonants (geminates), you simply double the base consonant. No diacritic is needed since the vowel is 'a'."
     },
