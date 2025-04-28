@@ -18,6 +18,17 @@ export const metadata: Metadata = {
   title: "Ndịokwu - The Efficient Igbo Abugida Writing System",
   description: "Learn the most efficient writing system for the Igbo language, mastery in under 30 minutes",
   keywords: ["Ndịokwu", "Igbo", "language", "abugida", "writing system", "African languages"],
+  icons: {
+    icon: [
+      { url: '/images/favicon/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/images/favicon/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+    ],
+    apple: { url: '/images/favicon/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    other: [
+      { url: '/images/favicon/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/images/favicon/android-chrome-512x512.png', sizes: '512x512', type: 'image/png' },
+    ],
+  }
 };
 
 export default function RootLayout({
@@ -28,10 +39,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png" />
-        <link rel="icon" href="/favicon.ico" />
         <link rel="manifest" href="/images/favicon/site.webmanifest" />
       </head>
       <body
