@@ -74,62 +74,75 @@ export default function ConverterPage() {
 
   // Basic Latin to Ndịokwu conversion logic
   const convertLatinToNdiokwu = (text: string): string => {
-    // This is a simplified implementation.
-    // A full implementation would handle all the rules, tone marks, etc.
-    
     if (!text) return '';
     
-    // Special cases for common words that need specific translations
-    const specialCases: Record<string, string> = {
-      'ndịokwu': 'ⴳ̈ 𑀏 ꗷ̱',
-      // Add more special cases as needed
-    };
+    // Create an array to store the result
+    const result: string[] = [];
     
-    // Check if the input is a special case
-    if (specialCases[text.toLowerCase()]) {
-      return specialCases[text.toLowerCase()];
-    }
+    // Convert to lowercase for processing
+    const input = text.toLowerCase();
     
-    // First, handle digraphs to prevent partial matches
-    const digraphRegex = /(ch|gb|gh|gw|kp|kw|nj|ns|nw|ny|mb|nd|ng|nk|nt|nz)/gi;
-    let processed = text.replace(digraphRegex, match => `__${match}__`);
+    // Track position in the input string
+    let position = 0;
     
-    // Process consonant + vowel combinations
-    for (const consonant in consonantMap) {
-      const consonantPattern = new RegExp(`__${consonant}__|${consonant}`, 'gi');
+    while (position < input.length) {
+      // Check for digraphs first
+      let foundDigraph = false;
+      const digraphs = ['ch', 'gb', 'gh', 'gw', 'kp', 'kw', 'nj', 'ns', 'nw', 'ny', 'mb', 'nd', 'ng', 'nk', 'nt', 'nz'];
       
-      processed = processed.replace(consonantPattern, match => {
-        // Check if it's a special marked digraph
-        const isDigraph = match.startsWith('__');
-        const actualConsonant = isDigraph ? match.replace(/__/g, '') : match;
-        return `<${actualConsonant.toLowerCase()}>`;
-      });
-    }
-    
-    // Process vowels and add diacritics
-    const syllableRegex = /<([a-zịọụ]+)>([aeiouịọụ])?/gi;
-    processed = processed.replace(syllableRegex, (match, consonant, vowel) => {
-      if (!vowel) {
-        // Standalone consonant (rare in Igbo)
-        return consonantMap[consonant.toLowerCase()] + '̆';
+      for (const digraph of digraphs) {
+        if (input.substring(position, position + digraph.length).toLowerCase() === digraph) {
+          // Found a digraph
+          foundDigraph = true;
+          
+          // Check if there's a vowel after this digraph
+          if (position + digraph.length < input.length && 
+              'aeiouịọụ'.includes(input[position + digraph.length])) {
+            // Digraph + vowel
+            const vowel = input[position + digraph.length];
+            result.push(consonantMap[digraph] + vowelDiacriticMap[vowel]);
+            position += digraph.length + 1; // Move past digraph and vowel
+          } else {
+            // Standalone digraph (rare in Igbo, but possible)
+            result.push(consonantMap[digraph]);
+            position += digraph.length;
+          }
+          break;
+        }
       }
       
-      // Consonant + vowel
-      const baseChar = consonantMap[consonant.toLowerCase()];
-      const diacritic = vowelDiacriticMap[vowel.toLowerCase()];
-      return baseChar + diacritic;
-    });
-    
-    // Handle standalone vowels
-    for (const vowel in vowelMap) {
-      const vowelPattern = new RegExp(`(?<![a-zịọụ<>])${vowel}(?![a-zịọụ<>])`, 'gi');
-      processed = processed.replace(vowelPattern, () => vowelMap[vowel.toLowerCase()]);
+      if (foundDigraph) continue;
+      
+      // If not a digraph, check for single consonant
+      if ('bcdfghjklmnpqrstvwxyz'.includes(input[position])) {
+        const consonant = input[position];
+        
+        // Check if there's a vowel after this consonant
+        if (position + 1 < input.length && 
+            'aeiouịọụ'.includes(input[position + 1])) {
+          // Consonant + vowel
+          const vowel = input[position + 1];
+          result.push(consonantMap[consonant] + vowelDiacriticMap[vowel]);
+          position += 2; // Move past consonant and vowel
+        } else {
+          // Standalone consonant
+          result.push(consonantMap[consonant]);
+          position += 1;
+        }
+      }
+      // Check for vowel
+      else if ('aeiouịọụ'.includes(input[position])) {
+        // Standalone vowel
+        result.push(vowelMap[input[position]]);
+        position += 1;
+      }
+      // Unknown character, just skip
+      else {
+        position += 1;
+      }
     }
     
-    // Clean up any remaining markers
-    processed = processed.replace(/<|>/g, '');
-    
-    return processed;
+    return result.join('');
   };
 
   // Converter function for Ndịokwu to Latin
@@ -173,7 +186,7 @@ export default function ConverterPage() {
 
   // Example conversions
   const examples = [
-    { latin: "onye", ndiokwu: "𑀏 ꘥ʼ" },
+    { latin: "onye", ndiokwu: "𑀏𑀤̄" },
     { latin: "ndịokwu", ndiokwu: "ⴳ̈ 𑀏 ꗷ̱" },
     { latin: "igbo", ndiokwu: "ꕈꘛ̣" },
     { latin: "akwụkwọ", ndiokwu: "𑀩꘤̳꘤̤" }
