@@ -86,7 +86,15 @@ export default function ConverterPage() {
     let position = 0;
     
     while (position < input.length) {
-      // Check for digraphs first
+      // Check for spaces first
+      if (input[position] === ' ') {
+        // Use triple spaces for better visibility
+        result.push('   ');
+        position += 1;
+        continue;
+      }
+      
+      // Check for digraphs next
       let foundDigraph = false;
       const digraphs = ['ch', 'gb', 'gh', 'gw', 'kp', 'kw', 'nj', 'ns', 'nw', 'ny', 'mb', 'nd', 'ng', 'nk', 'nt', 'nz'];
       
@@ -136,8 +144,9 @@ export default function ConverterPage() {
         result.push(vowelMap[input[position]]);
         position += 1;
       }
-      // Unknown character, just skip
+      // Unknown character or punctuation, preserve it
       else {
+        result.push(input[position]);
         position += 1;
       }
     }
