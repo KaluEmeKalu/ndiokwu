@@ -177,7 +177,7 @@ export default function Home() {
               <h3 className="text-xl font-semibold mb-4">Sample Text:</h3>
               <div className="mb-6 p-4 bg-gray-100 dark:bg-gray-700 rounded-lg">
                 <p className="text-xl mb-2">Ndịokwu:</p>
-                <p className="text-2xl mb-6">𑀐ꕫ̳ꕼ̳ ꖫ ꔕ ꖫ ꔕꕪ̳ ꕈꖹ̄ 𑀩, 𑀐ꔵ̳ꔧꕼ ꖫ ꔕ ꕫ̳ 𑀏ꕚ̄ 𑀩ꗦ̆ꕼ̈ꖑ </p>
+                <p className="text-2xl mb-6">𑀐 ꕫ̳𑀵̳ ꖫ ꔕ ꖫ-ꔕꕪ̳ ꕈꖹ̄ 𑀩, 𑀐 ꔵ̳ꔧ𑀵 ꖫ ꔕ ꕫ̳ 𑀏𑀤̄ 𑀩ꗦ̱𑀵̈ꖑ.</p>
                 
                 <p className="text-xl mb-2">Igbo Latin:</p>
                 <p className="text-lg mb-6">Ọ bụrụ na ị na-ịgụ ihe a, ọ pụtara na ị bụ onye Afurịka.</p>

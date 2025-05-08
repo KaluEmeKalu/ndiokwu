@@ -33,17 +33,20 @@ const consonantMap: Record<string, string> = {
   'm': '𑀠',
   'mb': '𑄘',
   'n': 'ꖫ',
+  'nch': 'ꔟ',
   'nd': 'ⴳ',
   'ng': '𑀔',
-  'nj': 'ꖝ',
+  'ngw': 'ꕼ',
+  'nj': 'ꕨ',
   'nk': '𑄉',
+  'nkw': '꘥',
   'ns': '𑀶',
   'nt': '꘧',
   'nw': 'ꖇ',
   'ny': '𑀤',
   'nz': 'ꗢ',
   'p': 'ꔵ',
-  'r': 'ꕼ',
+  'r': '𑀵',
   's': '𑀚',
   't': 'ꔧ',
   'v': '꘣',
@@ -96,7 +99,7 @@ export default function ConverterPage() {
       
       // Check for digraphs next
       let foundDigraph = false;
-      const digraphs = ['ch', 'gb', 'gh', 'gw', 'kp', 'kw', 'nj', 'ns', 'nw', 'ny', 'mb', 'nd', 'ng', 'nk', 'nt', 'nz'];
+      const digraphs = ['ngw', 'nkw', 'nch', 'ch', 'gb', 'gh', 'gw', 'kp', 'kw', 'nj', 'ns', 'nw', 'ny', 'mb', 'nd', 'ng', 'nk', 'nt', 'nz'];
       
       for (const digraph of digraphs) {
         if (input.substring(position, position + digraph.length).toLowerCase() === digraph) {
