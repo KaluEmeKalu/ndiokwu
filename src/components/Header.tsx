@@ -35,6 +35,9 @@ const Header = () => {
           <Link href="/converter" className="hover:text-purple-200 transition-colors">
             Converter
           </Link>
+          <Link href="/why" className="hover:text-purple-200 transition-colors">
+            Why Ndịokwu
+          </Link>
           <Link href="/about" className="hover:text-purple-200 transition-colors">
             About
           </Link>
@@ -114,6 +117,13 @@ const Header = () => {
               onClick={toggleMenu}
             >
               Converter
+            </Link>
+            <Link 
+              href="/why" 
+              className="hover:text-purple-200 transition-colors"
+              onClick={toggleMenu}
+            >
+              Why Ndịokwu
             </Link>
             <Link 
               href="/about" 

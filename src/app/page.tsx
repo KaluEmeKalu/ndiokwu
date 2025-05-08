@@ -45,10 +45,10 @@ export default function Home() {
                 Start Learning
               </Link>
               <Link 
-                href="/alphabet" 
+                href="/why" 
                 className="bg-purple-800 text-white px-8 py-3 rounded-lg font-medium text-lg hover:bg-purple-900 transition-colors inline-block text-center"
               >
-                Full Alphabet
+                Why It's Superior
               </Link>
               <Link 
                 href="/converter" 

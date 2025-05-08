@@ -40,38 +40,52 @@ export default function About() {
 
             <div className="space-y-7 leading-relaxed text-lg">
               <p>
-                <span className="float-left text-5xl font-bold mr-2 mt-1 text-purple-700 dark:text-purple-400">B</span>efore my tenure at Meta, I confronted a pivotal challenge: mastering discrete mathematics to navigate the demanding landscape of technical interviews. This discipline, foundational to computer science, encompasses areas like logic, set theory, graph theory, and combinatorics. Its principles are instrumental in algorithm design, data structures, and cryptography, making it indispensable for software engineers.
+                <span className="float-left text-5xl font-bold mr-2 mt-1 text-purple-700 dark:text-purple-400">W</span>hy does the average Nigerian child grow up fluent in English but illiterate in their mother tongue? Why do our indigenous languages, rich in tone, rhythm, and meaning, still rely on scripts designed for foreign tongues? These questions gnawed at me for years.
               </p>
 
-              <p>Immersing myself in discrete mathematics reshaped my cognitive framework. I began to perceive mathematical notation not merely as symbols but as a concise language capable of conveying complex ideas with precision. For instance, the summation symbol (∑) succinctly represents iterative processes, embodying loops and conditions in a single character. This realization deepened my appreciation for functional programming, a paradigm that emphasizes pure functions, immutability, and declarative code—attributes that align closely with mathematical logic and reduce the likelihood of errors.</p>
+              <p>As Nigeria strides deeper into the digital age, we face a paradox: our people are increasingly fluent in the languages of code and commerce but disconnected from the scripts of their ancestors. If language is power, then script is the infrastructure of that power. And right now, Igbo, like many African languages, lacks the infrastructure to thrive in modern, global systems.</p>
+
+              <p>Before my time at Meta, I was wrestling with another kind of infrastructure problem: how to break into top-tier software engineering. To do that, I had to master discrete mathematics, a foundation of computer science that includes logic, set theory, graph theory, and combinatorics. Its precision and structure shaped the way I thought, not just about algorithms, but about language itself.</p>
+
+              <p>Immersing myself in math rewired how I saw the world. I began to see symbols as more than notation. The summation symbol (∑), for example, condenses a loop, a process, a decision, all into one elegant mark. That realization unlocked my appreciation for functional programming, a coding paradigm rooted in mathematical purity and clarity. It also planted a seed.</p>
 
               {/* Pull Quote 1 */}
               <blockquote className="my-10 p-4 border-l-4 border-purple-600 dark:border-purple-400 bg-purple-50 dark:bg-gray-800 italic text-xl font-medium text-purple-900 dark:text-purple-200">
-                "Inspired by these insights, I set out to develop the Ndịokwu Igbo Abugida—a writing system tailored for the Igbo language."
+                "If math and code could speak so precisely through symbols... why couldn't our language?"
               </blockquote>
 
-              <p>Concurrently, I embarked on learning Mandarin Chinese, drawn by its structural elegance. Mandarin comprises approximately 409 distinct syllables, but when combined with its tonal system—four primary tones and a neutral tone—the language achieves a rich tapestry of meanings. This "sound-efficient, tone-rich" nature intrigued me, especially given my familiarity with Igbo, another tonal language. However, unlike Mandarin, Igbo lacked a comprehensive indigenous writing system.</p>
+              <p>At the same time, I was studying Mandarin Chinese, a tonal language with just over 400 syllables but thousands of meanings, unlocked by tone and context. Its efficiency fascinated me, especially as a native Igbo speaker. Igbo too is tonal, rhythmic, and deeply expressive. But unlike Mandarin, Igbo lacks a widely adopted indigenous script.</p>
 
-              <p>Historically, the Igbo people utilized Nsibidi, an ideographic script originating around 400 CE among the Ejagham people and later adopted by neighboring cultures, including the Igbo. Nsibidi conveyed concepts through symbols, often used in rituals and secret societies, but it wasn't a full-fledged writing system for daily communication. In 2009, Lotanna Igwe-Odunze introduced Ńdébé, a modern script inspired by traditional Igbo designs. While Ńdébé represents a significant step towards a functional Igbo writing system, its adoption has been limited, and its complexity posed challenges for learners.</p>
+              <p>Nsibidi, our ancestral ideographic system, is beautiful but symbolic, not phonetic. In 2009, Lotanna Igwe-Odunze introduced Ńdébé, a modern attempt to bridge that gap. It was a noble innovation, but adoption lagged, perhaps due to complexity, lack of phonological regularity, or the steep learning curve.</p>
 
-              <p>My exploration led me to the Vai syllabary, devised in the 1830s by Momolu Duwalu Bukele of Liberia. Remarkably, Bukele reported that the script was revealed to him in a dream. The Vai script is a syllabary, with each character representing a syllable, and it facilitated literacy among the Vai people, who used it for various purposes, including correspondence and record-keeping. The success of the Vai syllabary demonstrated the potential of indigenous scripts to empower communities linguistically and culturally.</p>
+              <p>That search led me to Vai, an indigenous syllabary created in 1830s Liberia by Momolu Duwalu Bukele, who claimed the script came to him in a dream. Vai characters represent full syllables, and the script empowered the Vai people to write, record, and govern themselves in their own tongue.</p>
 
-              <p>Inspired by these insights, I set out to develop the Ndịokwu Igbo Abugida—a writing system tailored for the Igbo language. An abugida strikes a balance between alphabets and syllabaries, where each character denotes a consonant-vowel combination, and diacritics modify the inherent vowel. This structure offers a compromise between the learning curve of alphabets and the reading efficiency of syllabaries.</p>
+              <p>That was my turning point. I realized: what if Igbo had a script that balanced ease of learning, tonal precision, and cultural identity without relying on colonial orthographies?</p>
 
-              <p>In crafting Ndịokwu, I prioritized:</p>
+              <p>That's how Ndịokwu was born.</p>
+
+              <h3 className="text-2xl font-bold mt-10 mb-6 text-gray-900 dark:text-white">What is Ndịokwu?</h3>
+
+              <p>Ndịokwu is an Abugida: a writing system that combines the best of alphabets and syllabaries. Each character represents a consonant-vowel unit, and tone or vowel shifts are expressed through diacritics. This system offers:</p>
 
               <ul className="list-disc pl-8 space-y-2 my-6 text-base">
-                <li><strong>Efficiency</strong>: Streamlining the learning process by reducing the number of characters without sacrificing expressiveness.</li>
-                <li><strong>Clarity</strong>: Ensuring each symbol is distinct and intuitive, minimizing ambiguity.</li>
-                <li><strong>Cultural Resonance</strong>: Drawing inspiration from traditional Igbo motifs to foster a sense of identity and continuity.</li>
+                <li><strong>Efficiency</strong>: A smaller, intuitive character set with high expressive power.</li>
+                <li><strong>Clarity</strong>: Distinct, logical symbols designed for legibility and rapid acquisition.</li>
+                <li><strong>Cultural Resonance</strong>: Visual motifs inspired by Igbo art, pattern, and geometry.</li>
               </ul>
+
+              <h3 className="text-2xl font-bold mt-10 mb-6 text-gray-900 dark:text-white">Why It Matters</h3>
+
+              <p>Language is more than words. It is memory. It is worldview. It is the engine of economic, cultural, and technological empowerment. If we cannot write our language fluently, we cannot think in it fluently. And if we cannot think in it, we are forever outsourcing our identity.</p>
+
+              <p>Ndịokwu is my answer to that problem. It is not just a script, it is a blueprint for reclaiming ownership of our voice.</p>
 
               {/* Pull Quote 2 */}
                <blockquote className="my-10 p-6 border-t-2 border-b-2 border-purple-600 dark:border-purple-400 text-center text-2xl font-semibold text-gray-800 dark:text-gray-200">
-                "Ndịokwu aspires to provide Igbo speakers with a script that is not only functional but also a source of pride—a tool that honors our heritage while embracing the future."
+                "As with great software, a writing system must be built with intention, scalability, and user empathy. I designed Ndịokwu for the next generation of Igbo learners: children, coders, creators, and citizens of the digital future."
               </blockquote>
 
-              <p>Much like software development, creating a writing system demands intentionality and user-centric design. Ndịokwu aspires to provide Igbo speakers with a script that is not only functional but also a source of pride—a tool that honors our heritage while embracing the future.</p>
+              <p>May it serve as both bridge and beacon: connecting our past and illuminating our path forward.</p>
             </div>
           </motion.div>
         </div>
@@ -112,7 +126,7 @@ export default function About() {
                 </div>
                 <h3 className="text-xl font-semibold text-center mb-3">Vai Script</h3>
                 <p className="text-gray-600 dark:text-gray-400 text-center">
-                  The Vai syllabary provided a practical model. Most Ndịokwu characters are  directly from this script, devised by Momolu Duwalu Bukele in Liberia.
+                  The Vai syllabary provided a practical model. Most Ndịokwu characters are directly from this script, devised by Momolu Duwalu Bukele in Liberia.
                 </p>
               </div>
             </div>
