@@ -730,10 +730,6 @@ export default function WhyNdiokwu() {
                 </a>
               </motion.div>
             </div>
-            
-            <div className="mt-16">
-              <p className="text-purple-200">Already convinced? <a href="/signup" className="underline font-medium hover:text-white transition-colors">Sign up</a> and start your journey today!</p>
-            </div>
           </motion.div>
         </div>
       </section>
