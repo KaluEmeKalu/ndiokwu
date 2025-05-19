@@ -1,5 +1,6 @@
 import React, { PropsWithChildren } from 'react';
 
+// Lowercase mapping with all keys wrapped in single quotes
 const mapping: Record<string, string> = {
   // Standalone Vowels
   'a': '1',
@@ -349,18 +350,18 @@ const mapping: Record<string, string> = {
 'zụ': '䒁'
 };
 
-// Sort keys by length (longest first) to ensure proper matching
 const sortedKeys = Object.keys(mapping).sort((a, b) => b.length - a.length);
 
 const transformText = (input: string): string => {
+  const lowerInput = input.toLowerCase();
   let result = '';
   let i = 0;
 
-  while (i < input.length) {
+  while (i < lowerInput.length) {
     let matched = false;
 
     for (const key of sortedKeys) {
-      if (input.startsWith(key, i)) {
+      if (lowerInput.startsWith(key, i)) {
         result += mapping[key];
         i += key.length;
         matched = true;
@@ -369,7 +370,6 @@ const transformText = (input: string): string => {
     }
 
     if (!matched) {
-      // If no match found, keep the original character
       result += input[i];
       i++;
     }
@@ -383,7 +383,7 @@ export const NdiokwuText: React.FC<PropsWithChildren> = ({ children }) => {
   const transformed = transformText(text);
 
   return (
-    <div style={{ fontFamily: 'Ndiokwu, sans-serif', }}>
+    <div style={{ fontFamily: 'Ndiokwu, sans-serif' }}>
       {transformed}
     </div>
   );

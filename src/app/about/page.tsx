@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import NdiokwuText from '../../components/NdiokwuText';
 
 export default function About() {
   return (
@@ -18,10 +17,6 @@ export default function About() {
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               About Ndịokwu
             </h1>
-        <div className="text-xl">
-
-
-        </div>
             <p className="text-xl md:text-2xl">
               The story behind the most efficient writing system for the Igbo language
             </p>
