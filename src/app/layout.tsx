@@ -4,7 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { GoogleAnalytics } from '@next/third-parties/google';
-import { NdiokwuText } from 'components/NdiokwuText';
+import { NdiokwuText } from '../components/NdiokwuText';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
