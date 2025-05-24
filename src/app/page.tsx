@@ -3,6 +3,7 @@
 // import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import NdiokwuText from "@/components/NdiokwuText";
 
 export default function Home() {
   const container = {
@@ -32,7 +33,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              ⴳ̈ 𑀏 ꗷ̱ <span className="block mt-2">Ndịokwu</span>
+              <NdiokwuText>Ndịokwu</NdiokwuText> <span className="block mt-2">Ndịokwu</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8">
               The most efficient writing system ever developed for the Igbo language.
@@ -177,7 +178,7 @@ export default function Home() {
               <h3 className="text-xl font-semibold mb-4">Sample Text:</h3>
               <div className="mb-6 p-4 bg-gray-100 dark:bg-gray-700 rounded-lg">
                 <p className="text-xl mb-2">Ndịokwu:</p>
-                <p className="text-2xl mb-6">𑀐 ꕫ̳𑀵̳ ꖫ ꔕ ꖫ-ꔕꕪ̳ ꕈꖹ̄ 𑀩, 𑀐 ꔵ̳ꔧ𑀵 ꖫ ꔕ ꕫ̳ 𑀏𑀤̄ 𑀩ꗦ̱𑀵̈ꖑ.</p>
+                <p className="text-2xl mb-6"><NdiokwuText>Ọ bụrụ na ị na-ịgụ ihe a, ọ pụtara na ị bụ onye Afurịka</NdiokwuText></p>
                 
                 <p className="text-xl mb-2">Igbo Latin:</p>
                 <p className="text-lg mb-6">Ọ bụrụ na ị na-ịgụ ihe a, ọ pụtara na ị bụ onye Afurịka.</p>

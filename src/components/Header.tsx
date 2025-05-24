@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import NdiokwuText from './NdiokwuText';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,7 +16,7 @@ const Header = () => {
     <header className="bg-gradient-to-r from-purple-800 to-indigo-900 text-white py-4 px-6 shadow-lg">
       <div className="container mx-auto flex justify-between items-center">
         <Link href="/" className="flex items-center space-x-2">
-          <span className="text-3xl font-bold">ⴳ̈ 𑀏 ꗷ̱</span>
+          <span className="text-3xl font-bold"><NdiokwuText>Ndịokwu</NdiokwuText></span>
           <span className="text-xl font-medium">Ndịokwu</span>
         </Link>
 

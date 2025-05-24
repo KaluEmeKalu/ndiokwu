@@ -1,0 +1,55 @@
+Vowels
+
+a    → 1  
+e    → 2  
+i    → 3  
+ị    → 4  
+o    → 5  
+ọ    → 6  
+u    → 7  
+ụ    → 8  
+
+Consonants 
+
+b    → A  
+ch   → B  
+d    → C  
+f    → D  
+g    → E  
+gb   → F  
+gh   → G  
+gw   → H  
+h    → I  
+j    → J  
+k    → K  
+kp   → L  
+kw   → M  
+l    → N  
+m    → O  
+mb   → P  
+n    → Q  
+nch  → R  
+nd   → S  
+ng   → T  
+ngw  → U  
+nj   → V  
+nk   → W  
+nkw  → X  
+ns   → Y  
+nt   → Z  
+nw   → a  
+ny   → b  
+nz   → c  
+p    → d  
+r    → e  
+s    → f  
+t    → g  
+v    → h  
+w    → i  
+y    → j  
+z    → k  
+
+
+Vowels + Consonants 
+
+
