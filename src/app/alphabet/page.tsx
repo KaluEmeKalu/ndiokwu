@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import ConsonantVowelTable from '@/components/ConsonantVowelTable';
+import NdiokwuText from '@/components/NdiokwuText';
 
 export default function AlphabetPage() {
   const [selectedConsonant, setSelectedConsonant] = useState<string | null>(null);
@@ -125,7 +126,7 @@ export default function AlphabetPage() {
                       onClick={() => setSelectedConsonant(consonant.symbol)}
                     >
                       <span className="block text-sm">{consonant.symbol}</span>
-                      <span className="block text-lg mt-1">{consonant.base}</span>
+                      <span className="block text-lg mt-1"><NdiokwuText>{consonant.base}</NdiokwuText></span>
                     </button>
                   ))}
                 </div>
@@ -146,6 +147,7 @@ export default function AlphabetPage() {
                     >
                       <span className="block text-sm">{vowel.symbol}</span>
                       <span className="block text-sm mt-1">{vowel.diacritic}</span>
+                      <span className="block text-sm mt-1"><NdiokwuText>{vowel.example}</NdiokwuText></span>
                     </button>
                   ))}
                 </div>
@@ -156,7 +158,7 @@ export default function AlphabetPage() {
                 {selectedConsonant && selectedVowel ? (
                   <div className="p-6 bg-gray-100 dark:bg-gray-700 rounded-xl">
                     <p className="text-5xl mb-4 font-bold">
-                      {getCombinedCharacter(selectedConsonant, selectedVowel)}
+                      <NdiokwuText>{getCombinedCharacter(selectedConsonant, selectedVowel)}</NdiokwuText>
                     </p>
                     <p className="text-gray-600 dark:text-gray-300">
                       Consonant <strong>{selectedConsonant}</strong> + Vowel <strong>{selectedVowel}</strong>
@@ -187,7 +189,7 @@ export default function AlphabetPage() {
                 <div className="grid grid-cols-4 gap-4">
                   {independentVowels.map((vowel) => (
                     <div key={vowel.symbol} className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4 text-center">
-                      <span className="block text-3xl mb-2">{vowel.character}</span>
+                      <span className="block text-3xl mb-2"><NdiokwuText>{vowel.character}</NdiokwuText></span>
                       <span className="text-sm text-gray-600 dark:text-gray-300">{vowel.symbol}</span>
                     </div>
                   ))}
@@ -202,23 +204,73 @@ export default function AlphabetPage() {
                 <p className="text-emerald-200">Frequently used words and phrases in Ndịokwu</p>
               </div>
               <div className="p-6">
-                <ul className="space-y-4">
-                  <li className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
-                    <span className="text-2xl">𑀐ꖙ̈𑀠𑀠</span>
-                    <span className="text-gray-600 dark:text-gray-300">ọ dị mma</span>
-                  </li>
-
-                  <li className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
-                    <div className="flex flex-col items-center mb-4">
-                      <span className="text-2xl">ⴳ̈ 𑀏 ꗷ̱</span>
-                      <span className="text-gray-600 dark:text-gray-300">ndịokwu</span>
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                    <div className="text-center">
+                      <div className="text-3xl mb-2">ọ dị mma</div>
+                      <div className="text-sm text-gray-600 dark:text-gray-300">ọ dị mma</div>
                     </div>
-                  </li>
-                  <li className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
-                    <span className="text-2xl">ꕈꘛ̣</span>
-                    <span className="text-gray-600 dark:text-gray-300">igbo</span>
-                  </li>
-                </ul>
+                    <div className="text-right">
+                      <div className="text-lg font-medium">Good/Well</div>
+                      <div className="text-sm text-gray-500">Common response</div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                    <div className="text-center">
+                      <div className="text-3xl mb-2">ndịokwu</div>
+                      <div className="text-sm text-gray-600 dark:text-gray-300">ndịokwu</div>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-lg font-medium">Ndiokwu Script</div>
+                      <div className="text-sm text-gray-500">Writing system name</div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                    <div className="text-center">
+                      <div className="text-3xl mb-2">igbo</div>
+                      <div className="text-sm text-gray-600 dark:text-gray-300">igbo</div>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-lg font-medium">Igbo</div>
+                      <div className="text-sm text-gray-500">Language name</div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                    <div className="text-center">
+                      <div className="text-3xl mb-2">nnọọ</div>
+                      <div className="text-sm text-gray-600 dark:text-gray-300">nnọọ</div>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-lg font-medium">Welcome</div>
+                      <div className="text-sm text-gray-500">Greeting</div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                    <div className="text-center">
+                      <div className="text-3xl mb-2">ụlọ</div>
+                      <div className="text-sm text-gray-600 dark:text-gray-300">ụlọ</div>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-lg font-medium">House</div>
+                      <div className="text-sm text-gray-500">Common noun</div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                    <div className="text-center">
+                      <div className="text-3xl mb-2">mmadụ</div>
+                      <div className="text-sm text-gray-600 dark:text-gray-300">mmadụ</div>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-lg font-medium">Person</div>
+                      <div className="text-sm text-gray-500">Common noun</div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </motion.div>

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { FaLightbulb, FaBrain, FaLanguage, FaChartLine } from "react-icons/fa";
 import { HiSparkles } from "react-icons/hi";
+import NdiokwuText from "@/components/NdiokwuText";
 
 // Animation variants
 const fadeIn = {
@@ -134,9 +135,9 @@ export default function WhyNdiokwu() {
                       <div className="w-full h-full rounded-full flex items-center justify-center bg-gradient-to-br from-purple-900/80 to-indigo-900/80 backdrop-blur-sm">
                         <div className="text-center">
                           <div className="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-indigo-300 mb-2">
-                            ꕼ̤ꔧ
+                            <NdiokwuText>Igbo</NdiokwuText>
                           </div>
-                          <div className="text-xs uppercase tracking-widest text-indigo-300">Ndịokwu Script</div>
+                          <div className="text-xs uppercase tracking-widest text-indigo-300">NDIOKWU SCRIPT</div>
                         </div>
                       </div>
                     </div>

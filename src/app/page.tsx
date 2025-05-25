@@ -67,7 +67,7 @@ export default function Home() {
           >
             <div className="relative w-64 h-64 md:w-96 md:h-96 float-animation">
               <div className="absolute inset-0 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-6xl md:text-9xl">
-                ꗏ̈
+              <NdiokwuText>Ndị</NdiokwuText>
               </div>
             </div>
           </motion.div>
@@ -178,7 +178,7 @@ export default function Home() {
               <h3 className="text-xl font-semibold mb-4">Sample Text:</h3>
               <div className="mb-6 p-4 bg-gray-100 dark:bg-gray-700 rounded-lg">
                 <p className="text-xl mb-2">Ndịokwu:</p>
-                <p className="text-2xl mb-6"><NdiokwuText>Ọ bụrụ na ị na-ịgụ ihe a, ọ pụtara na ị bụ onye Afurịka</NdiokwuText></p>
+                <p className="text-2xl mb-6"><NdiokwuText>ọ bụrụ na ị na-ịgụ ihe a, ọ pụtara na ị bụ onye Afurịka</NdiokwuText></p>
                 
                 <p className="text-xl mb-2">Igbo Latin:</p>
                 <p className="text-lg mb-6">Ọ bụrụ na ị na-ịgụ ihe a, ọ pụtara na ị bụ onye Afurịka.</p>

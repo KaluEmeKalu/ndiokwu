@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
+import NdiokwuText from '@/components/NdiokwuText';
 
 // Translation mappings
 const vowelMap: Record<string, string> = {
@@ -328,7 +329,13 @@ export default function ConverterPage() {
                     ref={outputRef}
                     className="w-full h-56 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600 overflow-y-auto text-lg"
                   >
-                    {outputText || (
+                    {outputText ? (
+                      conversionDirection === 'latin-to-ndiokwu' ? (
+                        <NdiokwuText>{outputText}</NdiokwuText>
+                      ) : (
+                        outputText
+                      )
+                    ) : (
                       <span className="text-gray-400 dark:text-gray-500">
                         Converted text will appear here...
                       </span>
@@ -355,7 +362,7 @@ export default function ConverterPage() {
                   <p className="text-lg mb-2">{example.latin}</p>
                   
                   <p className="text-sm text-gray-500 dark:text-gray-400 mb-1">Ndịokwu:</p>
-                  <p className="text-xl font-bold">{example.ndiokwu}</p>
+                  <p className="text-xl font-bold"><NdiokwuText>{example.ndiokwu}</NdiokwuText></p>
                   
                   <button
                     className="w-full mt-3 py-2 text-sm bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 rounded transition-colors"

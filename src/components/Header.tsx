@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import NdiokwuText from './NdiokwuText';
+import NdiokwuText from '@/components/NdiokwuText';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
