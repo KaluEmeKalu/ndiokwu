@@ -871,17 +871,27 @@ export default function LearnPage() {
         <span className="bg-gray-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3">7</span>
         Tone Marks (Advanced - Optional)
       </h3>
-      <p className="text-lg mb-4">For advanced users who want to mark tones explicitly:</p>
+      <p className="text-lg mb-4">For advanced users who want to mark tones explicitly, use standard Latin Igbo tone marks:</p>
       
       <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
         <ul className="space-y-2">
-          <li><strong>High tone:</strong> ˄ (place after vowel diacritic)</li>
-          <li><strong>Low tone:</strong> ˅ (place after vowel diacritic)</li>
-          <li><strong>Mid tone:</strong> no mark (default)</li>
-      </ul>
-        <div className="mt-4 text-center">
-          <div className="text-2xl"><NdiokwuText>hé</NdiokwuText></div>
-          <div className="text-sm text-gray-600 dark:text-gray-400">hé (high tone)</div>
+          <li><strong>High tone:</strong> ´ (acute accent) - place after the vowel</li>
+          <li><strong>Low tone:</strong> ` (grave accent) - place after the vowel</li>
+          <li><strong>Neutral tone:</strong> no mark (default)</li>
+        </ul>
+        <div className="mt-4 space-y-3">
+          <div className="text-center">
+            <div className="text-2xl"><NdiokwuText>ọgá</NdiokwuText></div>
+            <div className="text-sm text-gray-600 dark:text-gray-400">ọgá (master/boss) - high tone on final vowel</div>
+          </div>
+          <div className="text-center">
+            <div className="text-2xl"><NdiokwuText>àkwà</NdiokwuText></div>
+            <div className="text-sm text-gray-600 dark:text-gray-400">àkwà (cloth) - low tone on first vowel</div>
+          </div>
+          <div className="text-center">
+            <div className="text-2xl"><NdiokwuText>nwa</NdiokwuText></div>
+            <div className="text-sm text-gray-600 dark:text-gray-400">nwa (child) - neutral tones</div>
+          </div>
         </div>
       </div>
 
