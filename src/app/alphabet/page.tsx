@@ -207,7 +207,7 @@ export default function AlphabetPage() {
                 <div className="space-y-4">
                   <div className="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
                     <div className="text-center">
-                      <div className="text-3xl mb-2">ọ dị mma</div>
+                      <div className="text-3xl mb-2"><NdiokwuText>ọ dị mmma</NdiokwuText></div>
                       <div className="text-sm text-gray-600 dark:text-gray-300">ọ dị mma</div>
                     </div>
                     <div className="text-right">
@@ -218,7 +218,7 @@ export default function AlphabetPage() {
 
                   <div className="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
                     <div className="text-center">
-                      <div className="text-3xl mb-2">ndịokwu</div>
+                      <div className="text-3xl mb-2"><NdiokwuText>ndịokwu</NdiokwuText></div>
                       <div className="text-sm text-gray-600 dark:text-gray-300">ndịokwu</div>
                     </div>
                     <div className="text-right">
@@ -229,7 +229,7 @@ export default function AlphabetPage() {
 
                   <div className="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
                     <div className="text-center">
-                      <div className="text-3xl mb-2">igbo</div>
+                      <div className="text-3xl mb-2"><NdiokwuText>igbo</NdiokwuText></div>
                       <div className="text-sm text-gray-600 dark:text-gray-300">igbo</div>
                     </div>
                     <div className="text-right">
@@ -240,7 +240,7 @@ export default function AlphabetPage() {
 
                   <div className="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
                     <div className="text-center">
-                      <div className="text-3xl mb-2">nnọọ</div>
+                      <div className="text-3xl mb-2"><NdiokwuText>nnọọ</NdiokwuText></div>
                       <div className="text-sm text-gray-600 dark:text-gray-300">nnọọ</div>
                     </div>
                     <div className="text-right">
@@ -251,7 +251,7 @@ export default function AlphabetPage() {
 
                   <div className="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
                     <div className="text-center">
-                      <div className="text-3xl mb-2">ụlọ</div>
+                      <div className="text-3xl mb-2"><NdiokwuText>ụlọ</NdiokwuText></div>
                       <div className="text-sm text-gray-600 dark:text-gray-300">ụlọ</div>
                     </div>
                     <div className="text-right">
@@ -262,7 +262,7 @@ export default function AlphabetPage() {
 
                   <div className="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
                     <div className="text-center">
-                      <div className="text-3xl mb-2">mmadụ</div>
+                      <div className="text-3xl mb-2"><NdiokwuText>mmmadụ</NdiokwuText></div>
                       <div className="text-sm text-gray-600 dark:text-gray-300">mmadụ</div>
                     </div>
                     <div className="text-right">
