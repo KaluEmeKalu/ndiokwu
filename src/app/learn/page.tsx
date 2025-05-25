@@ -861,9 +861,9 @@ export default function LearnPage() {
       <div className="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-lg my-4">
         <div className="font-bold mb-2">Common Examples:</div>
         <ul className="space-y-2">
-          <li><NdiokwuText>ọ</NdiokwuText> <NdiokwuText>dị</NdiokwuText> <NdiokwuText>mmma</NdiokwuText> → "ọ dị mma" (it is good)</li>
-          <li><NdiokwuText>a</NdiokwuText> <NdiokwuText>na</NdiokwuText> <NdiokwuText>mm</NdiokwuText> → "a na m" (I am)</li>
-          <li><NdiokwuText>ị</NdiokwuText> <NdiokwuText>na</NdiokwuText> → "ị na" (you are)</li>
+          <li><NdiokwuText>ọ dị mmma</NdiokwuText> → "ọ dị mma" (it is good)</li>
+          <li><NdiokwuText>a na mm</NdiokwuText> → "a na m" (I am)</li>
+          <li><NdiokwuText>ị na</NdiokwuText> → "ị na" (you are)</li>
       </ul>
       </div>
 
