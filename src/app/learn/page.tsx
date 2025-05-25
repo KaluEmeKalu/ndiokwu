@@ -871,7 +871,7 @@ export default function LearnPage() {
         <span className="bg-gray-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3">7</span>
         Tone Marks (Advanced - Optional)
       </h3>
-      <p className="text-lg mb-4">For advanced users who want to mark tones explicitly, use standard Latin Igbo tone marks:</p>
+      <p className="text-lg mb-4">Ndiokwu uses the same tone marking system as Latin Igbo:</p>
       
       <div className="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-lg border border-amber-200 dark:border-amber-800/30 mb-4">
         <div className="flex items-start">
@@ -879,9 +879,9 @@ export default function LearnPage() {
             <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd"></path>
           </svg>
           <div>
-            <div className="font-semibold text-amber-800 dark:text-amber-300 mb-1">Current Font Limitation</div>
+            <div className="font-semibold text-amber-800 dark:text-amber-300 mb-1">Computer Font Limitation</div>
             <div className="text-sm text-amber-700 dark:text-amber-200">
-              The Ndiokwu computer font doesn't yet support specialized tone diacritics. We're using standard Latin Igbo tone notation (acute ´ and grave ` accents) until the font is updated with full tone mark support.
+              Ndiokwu tone marks work exactly like Latin Igbo (uptick ´ for high tone, downtick ` for low tone, none for neutral). However, we can't add these tick marks to the computer font yet, so examples below show Latin text with proper tone marking.
             </div>
           </div>
         </div>
@@ -889,22 +889,22 @@ export default function LearnPage() {
       
       <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
         <ul className="space-y-2">
-          <li><strong>High tone:</strong> ´ (acute accent) - place after the vowel</li>
-          <li><strong>Low tone:</strong> ` (grave accent) - place after the vowel</li>
+          <li><strong>High tone:</strong> ´ (uptick) - placed after the vowel</li>
+          <li><strong>Low tone:</strong> ` (downtick) - placed after the vowel</li>
           <li><strong>Neutral tone:</strong> no mark (default)</li>
         </ul>
         <div className="mt-4 space-y-3">
           <div className="text-center">
-            <div className="text-2xl"><NdiokwuText>ọgá</NdiokwuText></div>
-            <div className="text-sm text-gray-600 dark:text-gray-400">ọgá (master/boss) - high tone on final vowel</div>
+            <div className="text-2xl"><NdiokwuText>ọga</NdiokwuText></div>
+            <div className="text-sm text-gray-600 dark:text-gray-400">ọga (master/boss) - uptick would go after final vowel</div>
           </div>
           <div className="text-center">
-            <div className="text-2xl"><NdiokwuText>àkwà</NdiokwuText></div>
-            <div className="text-sm text-gray-600 dark:text-gray-400">àkwà (cloth) - low tone on first vowel</div>
+            <div className="text-2xl"><NdiokwuText>akwa</NdiokwuText></div>
+            <div className="text-sm text-gray-600 dark:text-gray-400">akwa (cloth) - downtick would go after first vowel</div>
           </div>
           <div className="text-center">
             <div className="text-2xl"><NdiokwuText>nwa</NdiokwuText></div>
-            <div className="text-sm text-gray-600 dark:text-gray-400">nwa (child) - neutral tones</div>
+            <div className="text-sm text-gray-600 dark:text-gray-400">nwa (child) - no tone marks needed</div>
           </div>
         </div>
       </div>
