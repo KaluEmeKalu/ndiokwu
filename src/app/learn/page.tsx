@@ -871,21 +871,23 @@ export default function LearnPage() {
         <span className="bg-gray-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3">7</span>
         Tone Marks (Advanced - Optional)
       </h3>
-      <p className="text-lg mb-4">Ndiokwu uses the same tone marking system as Latin Igbo:</p>
+      <p className="text-lg mb-4">By default, <strong>Ndiokwu does not use tone marks</strong> - just like most everyday Latin Igbo writing. The script is designed to be readable without them.</p>
       
-      <div className="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-lg border border-amber-200 dark:border-amber-800/30 mb-4">
+      <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800/30 mb-4">
         <div className="flex items-start">
-          <svg className="w-5 h-5 mr-2 text-amber-600 dark:text-amber-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-            <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd"></path>
+          <svg className="w-5 h-5 mr-2 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+            <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd"></path>
           </svg>
           <div>
-            <div className="font-semibold text-amber-800 dark:text-amber-300 mb-1">Computer Font Limitation</div>
-            <div className="text-sm text-amber-700 dark:text-amber-200">
-              Ndiokwu tone marks work exactly like Latin Igbo (uptick ´ for high tone, downtick ` for low tone, none for neutral). However, we can't add these tick marks to the computer font yet, so examples below show Latin text with proper tone marking.
+            <div className="font-semibold text-blue-800 dark:text-blue-300 mb-1">Community Standard</div>
+            <div className="text-sm text-blue-700 dark:text-blue-200">
+              The use of tone marks in Ndiokwu is <strong>open for community debate</strong>. When needed for advanced teaching, linguistic precision, or resolving ambiguity, tone marks can be applied using the same system as Latin Igbo.
             </div>
           </div>
         </div>
       </div>
+      
+      <p className="text-lg mb-4">When tone marks are needed, Ndiokwu uses the same tone marking system as Latin Igbo:</p>
       
       <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
         <ul className="space-y-2">
@@ -893,14 +895,31 @@ export default function LearnPage() {
           <li><strong>Low tone:</strong> ` (downtick) - placed after the vowel</li>
           <li><strong>Neutral tone:</strong> no mark (default)</li>
         </ul>
+      </div>
+
+      <div className="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-lg border border-amber-200 dark:border-amber-800/30 my-4">
+        <div className="flex items-start">
+          <svg className="w-5 h-5 mr-2 text-amber-600 dark:text-amber-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+            <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd"></path>
+          </svg>
+          <div>
+            <div className="font-semibold text-amber-800 dark:text-amber-300 mb-1">Computer Font Limitation</div>
+            <div className="text-sm text-amber-700 dark:text-amber-200">
+              Currently, we can't add tone tick marks to the computer font, so examples below show pure Ndiokwu script with descriptions of where tone marks would be placed if needed.
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
         <div className="mt-4 space-y-3">
           <div className="text-center">
             <div className="text-2xl"><NdiokwuText>ọga</NdiokwuText></div>
-            <div className="text-sm text-gray-600 dark:text-gray-400">ọga (master/boss) - uptick would go after final vowel</div>
+            <div className="text-sm text-gray-600 dark:text-gray-400">ọgá (master/boss) - uptick after final vowel</div>
           </div>
           <div className="text-center">
             <div className="text-2xl"><NdiokwuText>akwa</NdiokwuText></div>
-            <div className="text-sm text-gray-600 dark:text-gray-400">akwa (cloth) - downtick would go after first vowel</div>
+            <div className="text-sm text-gray-600 dark:text-gray-400">àkwà (cloth) - downtick after first vowel</div>
           </div>
           <div className="text-center">
             <div className="text-2xl"><NdiokwuText>nwa</NdiokwuText></div>

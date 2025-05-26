@@ -190,7 +190,7 @@ export default function ConsonantVowelTable({ className = '' }: ConsonantVowelTa
                       <div className="text-3xl mb-2 group-hover:scale-110 transition-transform duration-200">
                         <NdiokwuText>{consonant.symbol}{vowel.symbol}</NdiokwuText>
                       </div>
-                      <div className="text-xs text-gray-500 dark:text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                      <div className="text-xs text-gray-500 dark:text-gray-400 opacity-100 transition-opacity duration-200">
                         {consonant.symbol}{vowel.symbol}
                       </div>
                     </div>
