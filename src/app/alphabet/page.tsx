@@ -207,7 +207,7 @@ export default function AlphabetPage() {
                 <div className="space-y-4">
                   <div className="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
                     <div className="text-center">
-                      <div className="text-3xl mb-2"><NdiokwuText>ọ dị mmma</NdiokwuText></div>
+                      <div className="text-3xl mb-2"><NdiokwuText>ọ dị mma</NdiokwuText></div>
                       <div className="text-sm text-gray-600 dark:text-gray-300">ọ dị mma</div>
                     </div>
                     <div className="text-right">
@@ -240,8 +240,8 @@ export default function AlphabetPage() {
 
                   <div className="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
                     <div className="text-center">
-                      <div className="text-3xl mb-2"><NdiokwuText>nnọọ</NdiokwuText></div>
-                      <div className="text-sm text-gray-600 dark:text-gray-300">nnọọ</div>
+                      <div className="text-3xl mb-2"><NdiokwuText>nnọ</NdiokwuText></div>
+                      <div className="text-sm text-gray-600 dark:text-gray-300">nnọ</div>
                     </div>
                     <div className="text-right">
                       <div className="text-lg font-medium">Welcome</div>
@@ -262,8 +262,8 @@ export default function AlphabetPage() {
 
                   <div className="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
                     <div className="text-center">
-                      <div className="text-3xl mb-2"><NdiokwuText>mmmadụ</NdiokwuText></div>
-                      <div className="text-sm text-gray-600 dark:text-gray-300">mmadụ</div>
+                      <div className="text-3xl mb-2"><NdiokwuText>mmadụ</NdiokwuText></div>
+                      <div className="text-sm text-gray-600 dark:text-gray-300">madụ</div>
                     </div>
                     <div className="text-right">
                       <div className="text-lg font-medium">Person</div>
