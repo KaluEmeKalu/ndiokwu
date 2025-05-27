@@ -395,7 +395,7 @@ export default function WhyNdiokwu() {
                     <div className="w-5/12 p-5 bg-green-50 dark:bg-green-900/20 rounded-lg text-center">
                       <p className="text-green-800 dark:text-green-300 font-medium">Ndịokwu</p>
                       <div className="border-2 border-green-200 dark:border-green-800/30 rounded px-3 py-2 mt-2 text-sm font-mono">
-                      ꕼ̤ꔧ  
+                      <NdiokwuText>ngwọta</NdiokwuText>
                       </div>
                     </div>
                   </div>

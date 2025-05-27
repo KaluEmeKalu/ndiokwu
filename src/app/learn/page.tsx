@@ -201,10 +201,10 @@ export default function LearnPage() {
               <div className="bg-gradient-to-r from-gray-900 to-gray-800 dark:from-gray-700 dark:to-gray-600 rounded-2xl p-8 text-white shadow-xl">
                 <div className="text-5xl md:text-6xl font-light mb-4 leading-tight">
                   <NdiokwuText>{
-                    activeExample === 0 ? "Nwa ahụ sụrụ mmmiri." :
+                    activeExample === 0 ? "Nwa ahụ sụrụ mmiri." :
                     activeExample === 1 ? "ọ na-eje ahịa ụbọchị niile." :
-                    activeExample === 2 ? "Mama mm na-esi nnri nn'ụlọ." :
-                    "Ndị ọkpọkọrọ na-akpọ akpọ nn'osisi ahụ."
+                    activeExample === 2 ? "Mama m na-esi nri n'ụlọ." :
+                    "Ndị ọkpọkọrọ na-akpọ akpọ n'osisi ahụ."
                   }</NdiokwuText>
                 </div>
                 <div className="h-px bg-gradient-to-r from-transparent via-white/30 to-transparent my-4"></div>
@@ -795,17 +795,17 @@ export default function LearnPage() {
         <p className="mb-4">In Ndiokwu, every consonant normally carries a vowel. To show a <em>pure double consonant</em> without vowels between them, we need a special pattern:</p>
         <div className="grid md:grid-cols-3 gap-4">
           <div className="text-center">
-            <div className="text-2xl mb-2"><NdiokwuText>mmma</NdiokwuText></div>
+            <div className="text-2xl mb-2"><NdiokwuText>mma</NdiokwuText></div>
             <div className="font-bold">mma</div>
             <div className="text-sm text-gray-600 dark:text-gray-400">Good/Beautiful</div>
           </div>
           <div className="text-center">
-            <div className="text-2xl mb-2"><NdiokwuText>nnna</NdiokwuText></div>
+            <div className="text-2xl mb-2"><NdiokwuText>nna</NdiokwuText></div>
             <div className="font-bold">nna</div>
             <div className="text-sm text-gray-600 dark:text-gray-400">Father</div>
           </div>
           <div className="text-center">
-            <div className="text-2xl mb-2"><NdiokwuText>nnne</NdiokwuText></div>
+            <div className="text-2xl mb-2"><NdiokwuText>nne</NdiokwuText></div>
             <div className="font-bold">nne</div>
             <div className="text-sm text-gray-600 dark:text-gray-400">Mother</div>
           </div>
@@ -823,21 +823,21 @@ export default function LearnPage() {
           <div className="font-bold mb-2">Example: "mama m" (my mother)</div>
           <div className="text-center">
             <div className="text-2xl mb-2">
-              <NdiokwuText>mama</NdiokwuText> <NdiokwuText>mm</NdiokwuText>
+              <NdiokwuText>mama</NdiokwuText> <NdiokwuText>m</NdiokwuText>
             </div>
             <div>mama m</div>
             <div className="text-sm text-gray-600 dark:text-gray-400 mt-2">
-              The final "m" stands alone, so it's written as "mm"
+              The final "m" stands alone, so it's written as "m"
             </div>
           </div>
         </div>
         <div className="bg-red-50 dark:bg-red-900/20 p-4 rounded-lg">
           <div className="font-bold mb-2">Example: "mgbagwoju"</div>
           <div className="text-center">
-            <div className="text-2xl mb-2"><NdiokwuText>mmgbagwoju</NdiokwuText></div>
+            <div className="text-2xl mb-2"><NdiokwuText>mgbagwoju</NdiokwuText></div>
             <div>mgbagwoju</div>
             <div className="text-sm text-gray-600 dark:text-gray-400 mt-2">
-              Initial "m" has no vowel, so it's written as "mm"
+              Initial "m" has no vowel, so it's written as "m"
             </div>
           </div>
         </div>
@@ -861,8 +861,8 @@ export default function LearnPage() {
       <div className="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-lg my-4">
         <div className="font-bold mb-2">Common Examples:</div>
         <ul className="space-y-2">
-          <li><NdiokwuText>ọ dị mmma</NdiokwuText> → "ọ dị mma" (it is good)</li>
-          <li><NdiokwuText>a na mm</NdiokwuText> → "a na m" (I am)</li>
+          <li><NdiokwuText>ọ dị mma</NdiokwuText> → "ọ dị mma" (it is good)</li>
+          <li><NdiokwuText>a na m</NdiokwuText> → "a na m" (I am)</li>
           <li><NdiokwuText>ị na</NdiokwuText> → "ị na" (you are)</li>
       </ul>
       </div>

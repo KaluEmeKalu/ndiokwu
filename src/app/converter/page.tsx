@@ -199,10 +199,10 @@ export default function ConverterPage() {
 
   // Example conversions
   const examples = [
-    { latin: "onye", ndiokwu: "𑀏𑀤̄" },
-    { latin: "ndịokwu", ndiokwu: "ⴳ̈ 𑀏 ꗷ̱" },
-    { latin: "igbo", ndiokwu: "ꕈꘛ̣" },
-    { latin: "akwụkwọ", ndiokwu: "𑀩꘤̳꘤̤" }
+    { latin: "onye", ndiokwu: "onye" },
+    { latin: "ndịokwu", ndiokwu: "ndịokwu" },
+    { latin: "igbo", ndiokwu: "igbo" },
+    { latin: "akwụkwọ", ndiokwu: "akwụkwọ" }
   ];
 
   return (
