@@ -1,11 +1,11 @@
-# **Ndịokwu (ⴳ̈ 𑀏 ꗷ̱) Igbo Abugida Language Guide **  
+# **Ndịokwu (ⴳ̈ 𑀏 ꘣̱) Igbo Abugida Language Guide **  
 
 
 ---
 
 ## 1. Introduction
 
-**Ndịokwu** (ⴳ̈ 𑀏 ꗷ̱) is the most efficient writing system ever developed for the **Igbo language**. Designed for phonetic precision, simplicity, and speed, it compresses the entire syllabic inventory of Igbo into:
+**Ndịokwu** (ⴳ̈ 𑀏 ꘣̱) is the most efficient writing system ever developed for the **Igbo language**. Designed for phonetic precision, simplicity, and speed, it compresses the entire syllabic inventory of Igbo into:
 
 - **32 base consonants**  
 - **8 consistent vowel diacritics**  
@@ -48,10 +48,10 @@ Each consonant defaults to the vowel **"a"** (no mark). To indicate other vowels
 | **j**     | ꗏ         | **ny**    | 𑀤         |
 | **k**     | ꖑ         | **nz**    | ꗢ         |
 | **kp**    | 𑁟         | **p**     | ꔵ         |
-| **kw**    | ꗷ         | **r**     | ꕼ         |
+| **kw**    | ꘣         | **r**     | ꕼ         |
 | **l (L)** | ꘗ         | **s**     | 𑀚         |
 | **m**     | 𑀠         | **t**     | ꔧ         |
-| **z**     | 𑀣         | **v**     | ꘣         |
+| **z**     | 𑀣         | **v**     | ꗷ         |
 | **w**     | 𑀲         | **y**     | 𑀫         |
 
 ---
@@ -175,7 +175,7 @@ The Ndịokwu script organizes consonants into logical groups based on phonetic 
 |-------|-----------------|--------|-------------|
 | Group A1 | gb, gh, gw | ꘛ, ꔎ, ꖸ | Voiced labial–velars/fricatives; looped energy |
 | Group B1 | b, j, nt, nd | ꕫ, ꗏ, ꘧, ⴳ | Voiced stops + affricates |
-| Group B2 | f, v | ꗦ, ꘣ | Voiceless/voiced fricatives |
+| Group B2 | f, v | ꗦ, ꗷ | Voiceless/voiced fricatives |
 | Group D2 | ng, kp | 𑀔, 𑁟 | Deep-back/nasal–labial clusters |
 | Group F | mb, nk | 𑄘, 𑄉 | Pre-nasalized clusters |
 

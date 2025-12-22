@@ -20,11 +20,11 @@ const consonants = [
   { sound: 'j', glyph: 'ꗏ' }, { sound: 'nt', glyph: '꘧' },
   { sound: 'k', glyph: 'ꖑ' }, { sound: 'nw', glyph: 'ꖇ' },
   { sound: 'kp', glyph: '𑁟' }, { sound: 'ny', glyph: '𑀤' },
-  { sound: 'kw', glyph: 'ꗷ' }, { sound: 'nz', glyph: 'ꗢ' },
+  { sound: 'kw', glyph: '꘣' }, { sound: 'nz', glyph: 'ꗢ' },
   { sound: 'l', glyph: 'ꘗ' }, { sound: 'p', glyph: 'ꔵ' },
   { sound: 'm', glyph: '𑀠' }, { sound: 'r', glyph: '𑀵' },
   { sound: 'nch', glyph: 'ꔟ' }, { sound: 's', glyph: '𑀚' },
-  { sound: 'v', glyph: '꘣' }, { sound: 't', glyph: 'ꔧ' },
+  { sound: 'v', glyph: 'ꗷ' }, { sound: 't', glyph: 'ꔧ' },
   { sound: 'w', glyph: '𑀲' }, { sound: 'y', glyph: '𑀫' },
   { sound: 'z', glyph: '𑀣' }
 ];

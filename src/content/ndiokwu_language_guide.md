@@ -1,4 +1,4 @@
-# ✅ **Finalized: Ndịokwu (ⴳ̈ 𑀏 ꗷ̱) Igbo Abugida – Complete Character Guide**
+# ✅ **Finalized: Ndịokwu (ⴳ̈ 𑀏 ꘣̱) Igbo Abugida – Complete Character Guide**
 
 ---
 
@@ -79,7 +79,7 @@
 
 | **Word**      | **Script**                          | **Latin Igbo**   |
 |---------------|-------------------------------------|------------------|
-| *Ndịokwu*     | ⴳ̈ 𑀏 ꗷ̱                            | Ndịokwu          |
+| *Ndịokwu*     | ⴳ̈ 𑀏 ꘣̱                            | Ndịokwu          |
 | *mma*         | 𑀠𑀠                                | mma              |
 | *mị*          | 𑀠̈                                  | mị               |
 | *jide*        | ꕦ̊ꖙʼ                                | jide             |
